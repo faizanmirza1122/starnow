@@ -1,0 +1,1109 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" class="fonts-loaded">
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object#">
+		<link rel="preconnect" href="https://staticsn.com">
+	
+
+<script defer src="https://staticsn.com/Scripts/vendor/outdatedbrowser.min.js"></script>
+<script defer>
+	var bannerShown = false;
+	var promiseUnsupported = !(typeof Promise !== "undefined" && Object.prototype.toString.call(Promise.resolve()) === '[object Promise]');
+	//event listener form DOM ready
+	function addLoadEvent(func) {
+
+		function OnReadyListener() {
+			if (!bannerShown && (document.readyState == "interactive" || document.readyState == "complete")) {
+				func();
+			}
+		}
+		if (typeof window.onreadystatechange != 'function') {
+			document.onreadystatechange = OnReadyListener;
+		} else {
+			var oldOnReadyStateChange = window.onreadystatechange;
+			document.onreadystatechange = function () {
+				if (oldonload) {
+					oldOnReadyStateChange();
+				}
+				OnReadyListener();
+			}
+		}
+	}
+
+	//call function after DOM ready
+	if (promiseUnsupported) {
+		addLoadEvent(function () {
+			if (typeof outdatedBrowser !== "undefined") {
+				outdatedBrowser({
+					bgColor: '#FD3C2E',
+					color: '#ffffff',
+					lowerThan: promiseUnsupported,
+					languagePath: ''
+				})
+				bannerShown = true;
+			}
+		});
+	}
+</script><link href="https://staticsn.com/_styles/all.css?v=EVb095nwuuMaVJr3GESXuU8e-x8bTuhQCYqa6d7Pbd81" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,900,300i,400i|Open+Sans+Condensed:300,300italic,700" rel="stylesheet" /><title>
+	Register as talent - StarNow
+</title><meta name="description" /><meta property="fb:app_id" /><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no" /><meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="canonical" href="https://www.starnow.com/register/" />
+		
+		<link rel="alternate" href="https://www.starnow.co.uk/register/" hreflang="en-GB" />
+		<link rel="alternate" href="https://www.starnow.com.au/register/" hreflang="en-AU" />
+		<link rel="alternate" href="https://www.starnow.com/register/" hreflang="en" />
+		<link rel="alternate" href="https://www.starnow.com/register/" hreflang="x-default" />
+		<link rel="alternate" href="https://www.starnow.co.nz/register/" hreflang="en-NZ" />
+		<link rel="alternate" href="https://www.starnow.ie/register/" hreflang="en-IE" />
+		<link rel="alternate" href="https://www.starnow.ca/register/" hreflang="en-CA" />
+	<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@StarNow" />
+<meta name="twitter:title" content="Register as talent" />
+<meta name="twitter:description" content="Auditions &amp; Jobs for Models, Actors, Musicians and Dancers. Reality TV Casting Calls. Create your free profile and get discovered." />
+<meta name="twitter:image" content="https://staticsn.com/images/social/twitter/default.jpg?v=1" />
+<meta property="og:site_name" content="StarNow" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Register as talent" />
+<meta property="og:description" content="Auditions &amp; Jobs for Models, Actors, Musicians and Dancers. Reality TV Casting Calls. Create your free profile and get discovered." />
+<meta property="og:url" content="https://www.starnow.com/register/" />
+<meta property="og:image" content="https://staticsn.com/images/social/facebook/default.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+
+
+
+<script nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU">
+	(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a;}else{p(f);}};})(window,document);
+
+	window.starnow = {page:{},environment:"www",release:"1.0.0.0",memberId:0,hasSignedInBefore:false,staticUrl:"https://staticsn.com",starNowApiUrl:"https://api.starnow.com",feedUrl:"https://feed.starnow.com",baseUrl:"https://www.starnow.com",currentURL:"/register/?return_url=%2f",sessionCookie:"C539A5D1-BE9C-4128-8089-2FC2E87CC68A",user:{memberLevel:{id:0,label:"Trial",canAddFeaturedImages:false},id:0,anonymous:true,name:"Anonymous",firstName:"",memberType:"",stamp:0,isPaidMember:false,isInTalentDirectory:false,applicationCount:0,headshotUrl:"https://staticsn.com/images/register/no-headshot-25.png",profileUrl:"/0/",isPublic:false,isMinor:false,isEmailConfirmed:true}};
+	window.starnow.emailRegex = /^^[\w!#$%&'*+\-=?^`{}|\/]+(?:\.[\w!#$%&'*+\-=?^`{}|\/]+)*@[\w!#$%&'*+\-=?^`{}|\/]+(?:\.[\w!#$%&'*+\-=?^`{}|\/]+)+$$/;
+
+	starnow.apiToken = {
+	}
+</script>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://staticsn.com/scripts/html5shiv.js"></script>
+	<![endif]-->
+
+	
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1051265680" nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU"></script>
+<script nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU">
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'AW-1051265680');
+</script>
+
+
+
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				"gtm.start":
+					new Date().getTime(), event: "gtm.js"
+			});
+			var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+	})(window, document, "script", "dataLayer", "GTM-NCGCWXL");
+	</script>
+	<!-- End Google Tag Manager -->
+</head>
+
+<body id="ctl00_mainBody" onload="starnow.initSearchFields(0, $(&#39;#ctl00_cphMain_registrationForm_location_countryID&#39;), $(&#39;#ctl00_cphMain_registrationForm_location_regionID&#39;), $(&#39;#ctl00_cphMain_registrationForm_location_zipCode&#39;), &#39;4&#39;)">
+
+	
+	
+
+
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCGCWXL"
+				height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+	
+
+		<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es2015,es2016"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU">
+		(function ($,d) {
+			$.each(readyQ, function (i, f) { $(f); console.warn("Misplaced script detected", f); });
+			$.each(bindReadyQ, function (i, f) { $(d).bind("ready", f); console.warn("Misplaced script detected", f); });
+		})(jQuery, document)
+	</script>
+
+
+
+	
+
+<div id="fb-root"></div>
+
+<script nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU">
+	var snfb;
+
+	(function (snfb) {
+		var snfbInit = {"auto":[],"fbid":null,"scope":"public_profile,email,user_birthday,user_gender","isRegistrationPage":true,"appId":192931954085724,"channelUrl":"https%3a%2f%2fwww.starnow.com%2ffbchannel.ashx","version":"v4.0","returnURL":"/register/Register.aspx?return_url=/"};
+
+		for (var key in snfbInit) if (snfbInit.hasOwnProperty(key)) {
+			snfb[key] = snfbInit[key];
+		}
+	})(snfb || (snfb = {}));
+</script>
+
+	
+
+    
+<nav class="nav nav--naked">
+	<div class="relative">
+
+			<a href="{{route('home')}}" class="nav-logo--centered" tabindex="1" rel="home" title="Home">
+				<img src="/images/logo.png" class="nav-logo__image" alt="StarNow" width="110">
+			</a>
+
+
+	</div>
+</nav>
+
+    
+
+
+
+	
+	
+	<div class="row page-spacer">
+		<div class="small-12 columns">
+			<h1>Create your free profile</h1>
+			<p class="mb3">
+				<span class="no-wrap">Already a member? <a class="nounder" href="/signin/?return_url=%2f">Sign in</a></span>
+			</p>
+
+			<div class="section">
+				
+				
+				<form method="post" action="./?return_url=%2f" id="aspnetForm" novalidate="novalidate">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE_KEY" id="__VIEWSTATE_KEY" value="VIEWSTATE_dpkb1lnfziscb1w4ibaok2gg_b9e18cb7-85e2-4b07-a05f-68bdac765b39" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=dRrHKxl7JK1CR_pz1-2J2WSYTmgcTqr4WkFtyu6eUaSpMzIIoXcAS1QzBdd9Q9eqWpKYB7rg3yxhAZOyn2swUbhjpyg1&amp;t=637454068939909757" type="text/javascript"></script>
+
+					
+						<div id="ctl00_cphMain_registrationForm_credentialsSection" class="mb5">
+								
+
+
+<div id="registerCredentialsContainer"><div id="credentialsComponent" class="border--bottom" data-reactroot=""><div><div><fieldset class="fieldset pb2 pt2"><label class="copy__h2 txt-charcoal mb2">What&#x27;s your email address?<span class="req pl1">*</span><span class="ml1"><span class="tippy-wrapper" tabindex="-1"><svg class="txt-stone mb1" focusable="false" viewBox="0 0 25 24" aria-hidden="true" style="display:inline-block;fill:currentColor;height:1rem;width:1rem;user-select:none;pointer-events:initial;cursor:help" width="1rem" height="1rem" alt="info"><path d="M14.5 19.5c0 .3-.2.5-.5.5h-3a.5.5 0 01-.5-.5v-3c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3zm4-10.5c0 2.4-1.6 3.3-2.8 4-.7.4-1.2 1.1-1.2 1.5 0 .3-.2.5-.5.5h-3a.5.5 0 01-.5-.5v-.6c0-1.5 1.5-2.8 2.6-3.3 1-.4 1.4-.8 1.4-1.6 0-.7-1-1.4-2-1.4-.5 0-1 .2-1.3.4-.3.2-.6.5-1.3 1.5l-.4.1h-.3L7.2 8a.5.5 0 01-.2-.7A6.3 6.3 0 0112.8 4c2.7 0 5.7 2.1 5.7 5zm6 3a12 12 0 10-24 0 12 12 0 0024 0z" fill-rule="evenodd"></path></svg></span></span></label><div class="relative input-half"><input type="email" name="EmailField" placeholder="Email address" value="" autoComplete="email" maxLength="50" class=""/></div></fieldset></div></div><input type="hidden" name="Email" value=""/><input type="hidden" name="Password" value=""/><input type="hidden" name="IsBackstageAuthenticated" value="false"/></div></div>
+							</div>
+						<div id="ctl00_cphMain_registrationForm_regPanel">
+	
+							<div class="form-section"><h2 class="copy__h2">Select the jobs you're interested in</h2>
+								<fieldset class="fieldset-old">
+									
+										<div class="mt3 w-100 w-70-ns">
+											
+
+
+<div id="talentRegisterCategories"><div data-reactroot=""><div class="flex flex-wrap justify-start"><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_acting mr2 bg-white button--rounded button--outline">Acting</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_extras mr2 bg-white button--rounded button--outline">Extras</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_modelling mr2 bg-white button--rounded button--outline">Modelling</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_influencer mr2 bg-white button--rounded button--outline">Influencer</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_presenter mr2 bg-white button--rounded button--outline">Presenter</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_musician mr2 bg-white button--rounded button--outline">Musician</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_photography mr2 bg-white button--rounded button--outline">Photography</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_tv-&amp; reality mr2 bg-white button--rounded button--outline">TV &amp; Reality</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_dancing mr2 bg-white button--rounded button--outline">Dancing</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_film-&amp; stage crew mr2 bg-white button--rounded button--outline">Film &amp; Stage Crew</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_hair,-makeup, &amp; styling mr2 bg-white button--rounded button--outline">Hair, Makeup, &amp; Styling</a><a target="_self" class="button mb2 fw6 f8 button--sky-blue auto_survival-jobs mr2 bg-white button--rounded button--outline">Survival Jobs</a></div></div></div>
+										</div>
+										
+								</fieldset>
+							</div>
+							<div class="form-section"><h2 class="copy__h2">Enter your details</h2>
+								
+									<div class="flex items-center pv3">
+										<img src="https://staticsn.com/images/icons/svg/info--black.svg" width="20" height="20" />
+										<div class="ml2 f8">
+											<span class="fw7">Creating a profile for your child?</span> Use their details for these questions.
+										</div>
+									</div>
+								
+								
+								<fieldset class="fieldset-old"><label>First name <span class="req">*</span></label>
+									<input name="ctl00$cphMain$registrationForm$firstName" type="text" maxlength="20" size="25" id="ctl00_cphMain_registrationForm_firstName" class="input-half js-firstname" />
+									
+									
+									
+									
+									
+								</fieldset>
+								
+								<fieldset class="fieldset-old"><label>Last name <span class="req">*</span></label>
+									<input name="ctl00$cphMain$registrationForm$lastName" type="text" maxlength="20" size="25" id="ctl00_cphMain_registrationForm_lastName" class="input-half js-lastname" />
+									
+									
+									
+									
+								</fieldset>
+								
+								<fieldset class="fieldset-old"><label>Gender <span class="req">*</span></label>
+									<div class="input-group inline">
+		<label><input id="ctl00_cphMain_registrationForm_gender_ctl00" type="radio" name="ctl00$cphMain$registrationForm$gender$Group" value="m" /> Male</label>
+		<label><input id="ctl00_cphMain_registrationForm_gender_ctl01" type="radio" name="ctl00$cphMain$registrationForm$gender$Group" value="f" /> Female</label>
+
+	</div>
+	
+									
+								</fieldset>
+								
+								<fieldset class="fieldset-old"><label>Birth date <span class="req">*</span></label><p class="help">We use this to match you with relevant auditions & jobs</p>
+									
+<div class="input-group dmy">
+	
+		<label>
+			<p>Day</p>
+			<select name="ctl00$cphMain$registrationForm$birthDate$day" id="ctl00_cphMain_registrationForm_birthDate_day" class="inline input-small">
+		<option value="0"></option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+		<option value="24">24</option>
+		<option value="25">25</option>
+		<option value="26">26</option>
+		<option value="27">27</option>
+		<option value="28">28</option>
+		<option value="29">29</option>
+		<option value="30">30</option>
+		<option value="31">31</option>
+
+	</select>
+		</label>
+	
+	<label>
+		<p>Month</p>
+		<select name="ctl00$cphMain$registrationForm$birthDate$month" id="ctl00_cphMain_registrationForm_birthDate_month" class="inline input-medium">
+		<option value="0"></option>
+		<option value="1">January</option>
+		<option value="2">February</option>
+		<option value="3">March</option>
+		<option value="4">April</option>
+		<option value="5">May</option>
+		<option value="6">June</option>
+		<option value="7">July</option>
+		<option value="8">August</option>
+		<option value="9">September</option>
+		<option value="10">October</option>
+		<option value="11">November</option>
+		<option value="12">December</option>
+
+	</select>
+	</label>
+	<label class="no-wrap">
+		<p>Year</p>
+		
+				<select name="ctl00$cphMain$registrationForm$birthDate$year" id="ctl00_cphMain_registrationForm_birthDate_year" class="inline--force input-small">
+		<option value="0"></option>
+		<option value="2022">2022</option>
+		<option value="2021">2021</option>
+		<option value="2020">2020</option>
+		<option value="2019">2019</option>
+		<option value="2018">2018</option>
+		<option value="2017">2017</option>
+		<option value="2016">2016</option>
+		<option value="2015">2015</option>
+		<option value="2014">2014</option>
+		<option value="2013">2013</option>
+		<option value="2012">2012</option>
+		<option value="2011">2011</option>
+		<option value="2010">2010</option>
+		<option value="2009">2009</option>
+		<option value="2008">2008</option>
+		<option value="2007">2007</option>
+		<option value="2006">2006</option>
+		<option value="2005">2005</option>
+		<option value="2004">2004</option>
+		<option value="2003">2003</option>
+		<option value="2002">2002</option>
+		<option value="2001">2001</option>
+		<option value="2000">2000</option>
+		<option value="1999">1999</option>
+		<option value="1998">1998</option>
+		<option value="1997">1997</option>
+		<option value="1996">1996</option>
+		<option value="1995">1995</option>
+		<option value="1994">1994</option>
+		<option value="1993">1993</option>
+		<option value="1992">1992</option>
+		<option value="1991">1991</option>
+		<option value="1990">1990</option>
+		<option value="1989">1989</option>
+		<option value="1988">1988</option>
+		<option value="1987">1987</option>
+		<option value="1986">1986</option>
+		<option value="1985">1985</option>
+		<option value="1984">1984</option>
+		<option value="1983">1983</option>
+		<option value="1982">1982</option>
+		<option value="1981">1981</option>
+		<option value="1980">1980</option>
+		<option value="1979">1979</option>
+		<option value="1978">1978</option>
+		<option value="1977">1977</option>
+		<option value="1976">1976</option>
+		<option value="1975">1975</option>
+		<option value="1974">1974</option>
+		<option value="1973">1973</option>
+		<option value="1972">1972</option>
+		<option value="1971">1971</option>
+		<option value="1970">1970</option>
+		<option value="1969">1969</option>
+		<option value="1968">1968</option>
+		<option value="1967">1967</option>
+		<option value="1966">1966</option>
+		<option value="1965">1965</option>
+		<option value="1964">1964</option>
+		<option value="1963">1963</option>
+		<option value="1962">1962</option>
+		<option value="1961">1961</option>
+		<option value="1960">1960</option>
+		<option value="1959">1959</option>
+		<option value="1958">1958</option>
+		<option value="1957">1957</option>
+		<option value="1956">1956</option>
+		<option value="1955">1955</option>
+		<option value="1954">1954</option>
+		<option value="1953">1953</option>
+		<option value="1952">1952</option>
+		<option value="1951">1951</option>
+		<option value="1950">1950</option>
+		<option value="1949">1949</option>
+		<option value="1948">1948</option>
+		<option value="1947">1947</option>
+		<option value="1946">1946</option>
+		<option value="1945">1945</option>
+		<option value="1944">1944</option>
+		<option value="1943">1943</option>
+		<option value="1942">1942</option>
+		<option value="1941">1941</option>
+		<option value="1940">1940</option>
+		<option value="1939">1939</option>
+		<option value="1938">1938</option>
+		<option value="1937">1937</option>
+		<option value="1936">1936</option>
+		<option value="1935">1935</option>
+		<option value="1934">1934</option>
+		<option value="1933">1933</option>
+		<option value="1932">1932</option>
+		<option value="1931">1931</option>
+		<option value="1930">1930</option>
+		<option value="1929">1929</option>
+		<option value="1928">1928</option>
+		<option value="1927">1927</option>
+		<option value="1926">1926</option>
+		<option value="1925">1925</option>
+		<option value="1924">1924</option>
+		<option value="1923">1923</option>
+		<option value="1922">1922</option>
+
+	</select>
+			
+	</label>
+	<div class="clearfix"></div>
+</div>
+
+									
+									
+									
+								</fieldset>
+								
+								<fieldset class="fieldset-old"><label>Country <span class="req">*</span></label>
+									<select name="ctl00$cphMain$registrationForm$location$countryID" id="ctl00_cphMain_registrationForm_location_countryID" class="input-half mb2 unhide-me" onchange="starnow.changeCountry($(&#39;#ctl00_cphMain_registrationForm_location_countryID&#39;), $(&#39;#ctl00_cphMain_registrationForm_location_regionID&#39;), $(&#39;#ctl00_cphMain_registrationForm_location_zipCode&#39;), &#39;4&#39;)">
+		<option value="0">Choose country...</option>
+		<option value="0"></option>
+		<option value="3">United Kingdom</option>
+		<option value="2">Australia</option>
+		<option value="4">United States</option>
+		<option value="5">Canada</option>
+		<option value="1">New Zealand</option>
+		<option value="7">Ireland</option>
+		<option value="0"></option>
+		<option value="8">Afghanistan</option>
+		<option value="9">Albania</option>
+		<option value="10">Algeria</option>
+		<option value="11">American Samoa</option>
+		<option value="12">Andorra</option>
+		<option value="13">Angola</option>
+		<option value="14">Anguilla</option>
+		<option value="15">Antigua and Barbuda</option>
+		<option value="16">APO/FPO</option>
+		<option value="17">Argentina</option>
+		<option value="18">Armenia</option>
+		<option value="19">Aruba</option>
+		<option value="20">Austria</option>
+		<option value="21">Azerbaijan Republic</option>
+		<option value="22">Bahamas</option>
+		<option value="23">Bahrain</option>
+		<option value="24">Bangladesh</option>
+		<option value="25">Barbados</option>
+		<option value="26">Belarus</option>
+		<option value="27">Belgium</option>
+		<option value="28">Belize</option>
+		<option value="29">Benin</option>
+		<option value="30">Bermuda</option>
+		<option value="31">Bhutan</option>
+		<option value="32">Bolivia</option>
+		<option value="33">Bosnia and Herzegovina</option>
+		<option value="34">Botswana</option>
+		<option value="35">Brazil</option>
+		<option value="36">British Virgin Islands</option>
+		<option value="37">Brunei Darussalam</option>
+		<option value="38">Bulgaria</option>
+		<option value="39">Burkina Faso</option>
+		<option value="40">Burma</option>
+		<option value="41">Burundi</option>
+		<option value="42">Cambodia</option>
+		<option value="43">Cameroon</option>
+		<option value="44">Cape Verde Islands</option>
+		<option value="45">Cayman Islands</option>
+		<option value="46">Central African Republic</option>
+		<option value="47">Chad</option>
+		<option value="48">Chile</option>
+		<option value="49">China</option>
+		<option value="50">Colombia</option>
+		<option value="51">Comoros</option>
+		<option value="52">Congo</option>
+		<option value="53">Cook Islands</option>
+		<option value="54">Costa Rica</option>
+		<option value="55">Cote d Ivoire</option>
+		<option value="56">Croatia</option>
+		<option value="57">Cyprus</option>
+		<option value="58">Czech Republic</option>
+		<option value="59">Denmark</option>
+		<option value="60">Djibouti</option>
+		<option value="61">Dominica</option>
+		<option value="62">Dominican Republic</option>
+		<option value="63">Ecuador</option>
+		<option value="64">Egypt</option>
+		<option value="65">El Salvador</option>
+		<option value="66">Equatorial Guinea</option>
+		<option value="67">Eritrea</option>
+		<option value="68">Estonia</option>
+		<option value="69">Ethiopia</option>
+		<option value="70">Falkland Islands</option>
+		<option value="71">Fiji</option>
+		<option value="72">Finland</option>
+		<option value="73">France</option>
+		<option value="74">French Guiana</option>
+		<option value="75">French Polynesia</option>
+		<option value="76">Gabon Republic</option>
+		<option value="77">Gambia</option>
+		<option value="78">Georgia</option>
+		<option value="79">Germany</option>
+		<option value="80">Ghana</option>
+		<option value="81">Gibraltar</option>
+		<option value="82">Greece</option>
+		<option value="83">Greenland</option>
+		<option value="84">Grenada</option>
+		<option value="85">Guadeloupe</option>
+		<option value="86">Guam</option>
+		<option value="87">Guatemala</option>
+		<option value="88">Guernsey</option>
+		<option value="89">Guinea</option>
+		<option value="90">Guinea-Bissau</option>
+		<option value="91">Guyana</option>
+		<option value="92">Haiti</option>
+		<option value="93">Honduras</option>
+		<option value="94">Hong Kong</option>
+		<option value="95">Hungary</option>
+		<option value="96">Iceland</option>
+		<option value="97">India</option>
+		<option value="98">Indonesia</option>
+		<option value="219">Iran</option>
+		<option value="99">Israel</option>
+		<option value="100">Italy</option>
+		<option value="101">Jamaica</option>
+		<option value="102">Jan Mayen</option>
+		<option value="103">Japan</option>
+		<option value="104">Jersey</option>
+		<option value="105">Jordan</option>
+		<option value="106">Kazakhstan</option>
+		<option value="107">Kenya Coast Republic</option>
+		<option value="108">Kiribati</option>
+		<option value="109">Korea, South</option>
+		<option value="110">Kuwait</option>
+		<option value="111">Kyrgyzstan</option>
+		<option value="112">Laos</option>
+		<option value="113">Latvia</option>
+		<option value="114">Lebanon</option>
+		<option value="115">Lesotho</option>
+		<option value="116">Liechtenstein</option>
+		<option value="117">Lithuania</option>
+		<option value="118">Luxembourg</option>
+		<option value="119">Macau</option>
+		<option value="120">Macedonia</option>
+		<option value="121">Madagascar</option>
+		<option value="122">Malawi</option>
+		<option value="123">Malaysia</option>
+		<option value="124">Maldives</option>
+		<option value="125">Mali</option>
+		<option value="126">Malta</option>
+		<option value="127">Marshall Islands</option>
+		<option value="128">Martinique</option>
+		<option value="129">Mauritania</option>
+		<option value="130">Mauritius</option>
+		<option value="131">Mayotte</option>
+		<option value="132">Mexico</option>
+		<option value="133">Micronesia</option>
+		<option value="134">Moldova</option>
+		<option value="135">Monaco</option>
+		<option value="136">Mongolia</option>
+		<option value="220">Montenegro</option>
+		<option value="137">Montserrat</option>
+		<option value="138">Morocco</option>
+		<option value="139">Mozambique</option>
+		<option value="140">Namibia</option>
+		<option value="141">Nauru</option>
+		<option value="142">Nepal</option>
+		<option value="143">Netherlands</option>
+		<option value="144">Netherlands Antilles</option>
+		<option value="145">New Caledonia</option>
+		<option value="146">Nicaragua</option>
+		<option value="147">Niger</option>
+		<option value="148">Nigeria</option>
+		<option value="149">Niue</option>
+		<option value="150">Norway</option>
+		<option value="151">Oman</option>
+		<option selected="selected" value="152">Pakistan</option>
+		<option value="153">Palau</option>
+		<option value="154">Panama</option>
+		<option value="155">Papua New Guinea</option>
+		<option value="156">Paraguay</option>
+		<option value="157">Peru</option>
+		<option value="158">Philippines</option>
+		<option value="159">Poland</option>
+		<option value="160">Portugal</option>
+		<option value="161">Puerto Rico</option>
+		<option value="162">Qatar</option>
+		<option value="163">Romania</option>
+		<option value="164">Russia</option>
+		<option value="165">Rwanda</option>
+		<option value="166">Saint Helena</option>
+		<option value="167">Saint Kitts-Nevis</option>
+		<option value="168">Saint Lucia</option>
+		<option value="169">Saint Pierre and Miquelon</option>
+		<option value="170">Saint Vincent and the Grenadines</option>
+		<option value="171">San Marino</option>
+		<option value="172">Saudi Arabia</option>
+		<option value="173">Senegal</option>
+		<option value="221">Serbia</option>
+		<option value="174">Seychelles</option>
+		<option value="175">Sierra Leone</option>
+		<option value="176">Singapore</option>
+		<option value="177">Slovakia</option>
+		<option value="178">Slovenia</option>
+		<option value="179">Solomon Islands</option>
+		<option value="180">Somalia</option>
+		<option value="6">South Africa</option>
+		<option value="181">Spain</option>
+		<option value="182">Sri Lanka</option>
+		<option value="183">Suriname</option>
+		<option value="184">Svalbard</option>
+		<option value="185">Swaziland</option>
+		<option value="186">Sweden</option>
+		<option value="187">Switzerland</option>
+		<option value="188">Syria</option>
+		<option value="189">Tahiti</option>
+		<option value="190">Taiwan</option>
+		<option value="191">Tajikistan</option>
+		<option value="192">Tanzania</option>
+		<option value="193">Thailand</option>
+		<option value="194">Togo</option>
+		<option value="195">Tonga</option>
+		<option value="196">Trinidad and Tobago</option>
+		<option value="197">Tunisia</option>
+		<option value="198">Turkey</option>
+		<option value="199">Turkmenistan</option>
+		<option value="200">Turks and Caicos Islands</option>
+		<option value="201">Tuvalu</option>
+		<option value="202">Uganda</option>
+		<option value="203">Ukraine</option>
+		<option value="204">United Arab Emirates</option>
+		<option value="205">Uruguay</option>
+		<option value="206">Uzbekistan</option>
+		<option value="207">Vanuatu</option>
+		<option value="208">Vatican City State</option>
+		<option value="209">Venezuela</option>
+		<option value="210">Vietnam</option>
+		<option value="211">Virgin Islands</option>
+		<option value="212">Wallis and Futuna</option>
+		<option value="213">Western Sahara</option>
+		<option value="214">Western Samoa</option>
+		<option value="215">Yemen</option>
+		<option value="216">Yugoslavia</option>
+		<option value="217">Zambia</option>
+		<option value="218">Zimbabwe</option>
+
+	</select><br />
+
+<select name="ctl00$cphMain$registrationForm$location$regionID" id="ctl00_cphMain_registrationForm_location_regionID" disabled="disabled" class="aspNetDisabled input-half unhide-me">
+
+	</select>
+
+<input name="ctl00$cphMain$registrationForm$location$zipCode" type="text" maxlength="12" id="ctl00_cphMain_registrationForm_location_zipCode" class="input-half unhide-me" value="Zip code" onfocus="if (this.value == &#39;Zip code&#39;) this.value = &#39;&#39;;" onblur="if (this.value == &#39;&#39;) this.value = &#39;Zip code&#39;;" style="display:none;" />
+
+<noscript>
+	<select name="ctl00$cphMain$registrationForm$location$regionIDBasic" id="ctl00_cphMain_registrationForm_location_regionIDBasic">
+		<option selected="selected" value="0">Please select...</option>
+		<option value="0"></option>
+		<option value="19">AUSTRALIA   -   ACT</option>
+		<option value="20">AUSTRALIA   -   New South Wales</option>
+		<option value="21">AUSTRALIA   -   Northern Territory</option>
+		<option value="22">AUSTRALIA   -   Queensland</option>
+		<option value="23">AUSTRALIA   -   South Australia</option>
+		<option value="24">AUSTRALIA   -   Tasmania</option>
+		<option value="25">AUSTRALIA   -   Victoria</option>
+		<option value="26">AUSTRALIA   -   Western Australia</option>
+		<option value="204">CANADA   -   Alberta</option>
+		<option value="205">CANADA   -   British Columbia</option>
+		<option value="206">CANADA   -   Manitoba</option>
+		<option value="207">CANADA   -   New Brunswick</option>
+		<option value="208">CANADA   -   Newfoundland and Labrador</option>
+		<option value="209">CANADA   -   Northwest Territories</option>
+		<option value="210">CANADA   -   Nova Scotia</option>
+		<option value="211">CANADA   -   Nunavut</option>
+		<option value="212">CANADA   -   Ontario</option>
+		<option value="213">CANADA   -   Prince Edward Island</option>
+		<option value="214">CANADA   -   Quebec</option>
+		<option value="215">CANADA   -   Saskatchewan</option>
+		<option value="216">CANADA   -   Yukon</option>
+		<option value="235">FRANCE   -   Alsace</option>
+		<option value="236">FRANCE   -   Aquitaine</option>
+		<option value="237">FRANCE   -   Auvergne</option>
+		<option value="238">FRANCE   -   Basse-Normandie</option>
+		<option value="239">FRANCE   -   Bourgogne</option>
+		<option value="240">FRANCE   -   Bretagne</option>
+		<option value="241">FRANCE   -   Centre</option>
+		<option value="242">FRANCE   -   Champagne-Ardenne</option>
+		<option value="243">FRANCE   -   Corse</option>
+		<option value="244">FRANCE   -   Franche-Comt&#233;</option>
+		<option value="245">FRANCE   -   Haute-Normandie</option>
+		<option value="246">FRANCE   -   Ile-de-France</option>
+		<option value="247">FRANCE   -   Languedoc-Roussillon</option>
+		<option value="248">FRANCE   -   Limousin</option>
+		<option value="249">FRANCE   -   Lorraine</option>
+		<option value="250">FRANCE   -   Midi-Pyr&#233;n&#233;es</option>
+		<option value="251">FRANCE   -   Nord-Pas-de-Calais</option>
+		<option value="252">FRANCE   -   Pays de la Loire</option>
+		<option value="253">FRANCE   -   Picardie</option>
+		<option value="254">FRANCE   -   Poitou-Charentes</option>
+		<option value="255">FRANCE   -   Provence-Alpes-C&#244;te d&#39;Azur</option>
+		<option value="256">FRANCE   -   Rh&#244;ne-Alpes</option>
+		<option value="257">GERMANY   -   Baden-W&#252;rttemberg</option>
+		<option value="258">GERMANY   -   Bayern</option>
+		<option value="259">GERMANY   -   Berlin</option>
+		<option value="260">GERMANY   -   Brandenburg</option>
+		<option value="261">GERMANY   -   Bremen</option>
+		<option value="262">GERMANY   -   Hamburg</option>
+		<option value="263">GERMANY   -   Hessen</option>
+		<option value="264">GERMANY   -   Mecklenburg-Vorpommern</option>
+		<option value="265">GERMANY   -   Niedersachsen</option>
+		<option value="266">GERMANY   -   Nordrhein-Westfalen</option>
+		<option value="267">GERMANY   -   Rheinland-Pfalz</option>
+		<option value="268">GERMANY   -   Saarland</option>
+		<option value="269">GERMANY   -   Sachsen</option>
+		<option value="270">GERMANY   -   Sachsen-Anhalt</option>
+		<option value="271">GERMANY   -   Schleswig-Holstein</option>
+		<option value="272">GERMANY   -   Th&#252;ringen</option>
+		<option value="217">IRELAND   -   Dublin Region</option>
+		<option value="273">IRELAND   -   Midland Region</option>
+		<option value="221">IRELAND   -   North-West Region</option>
+		<option value="218">IRELAND   -   South-East Region</option>
+		<option value="220">IRELAND   -   South-West Region</option>
+		<option value="219">IRELAND   -   Western Region</option>
+		<option value="2">NEW ZEALAND   -   Auckland</option>
+		<option value="4">NEW ZEALAND   -   Bay Of Plenty</option>
+		<option value="15">NEW ZEALAND   -   Canterbury</option>
+		<option value="5">NEW ZEALAND   -   Gisborne</option>
+		<option value="6">NEW ZEALAND   -   Hawkes Bay</option>
+		<option value="9">NEW ZEALAND   -   Manawatu</option>
+		<option value="13">NEW ZEALAND   -   Marlborough</option>
+		<option value="12">NEW ZEALAND   -   Nelson Bays</option>
+		<option value="1">NEW ZEALAND   -   Northland</option>
+		<option value="17">NEW ZEALAND   -   Otago</option>
+		<option value="18">NEW ZEALAND   -   Southland</option>
+		<option value="7">NEW ZEALAND   -   Taranaki</option>
+		<option value="16">NEW ZEALAND   -   Timaru/Oamaru</option>
+		<option value="3">NEW ZEALAND   -   Waikato</option>
+		<option value="10">NEW ZEALAND   -   Wairarapa</option>
+		<option value="8">NEW ZEALAND   -   Wanganui</option>
+		<option value="11">NEW ZEALAND   -   Wellington</option>
+		<option value="14">NEW ZEALAND   -   West Coast</option>
+		<option value="222">SOUTH AFRICA   -   Eastern Cape</option>
+		<option value="223">SOUTH AFRICA   -   Free State</option>
+		<option value="224">SOUTH AFRICA   -   Gauteng</option>
+		<option value="225">SOUTH AFRICA   -   Kwazulu Natal</option>
+		<option value="226">SOUTH AFRICA   -   Limpopo</option>
+		<option value="227">SOUTH AFRICA   -   Mpumalanga</option>
+		<option value="228">SOUTH AFRICA   -   North West</option>
+		<option value="229">SOUTH AFRICA   -   Northern Cape</option>
+		<option value="230">SOUTH AFRICA   -   Western Cape</option>
+		<option value="27">UNITED KINGDOM   -   Aberdeen</option>
+		<option value="28">UNITED KINGDOM   -   Bath</option>
+		<option value="29">UNITED KINGDOM   -   Belfast</option>
+		<option value="30">UNITED KINGDOM   -   Birmingham</option>
+		<option value="31">UNITED KINGDOM   -   Blackburn</option>
+		<option value="32">UNITED KINGDOM   -   Blackpool</option>
+		<option value="33">UNITED KINGDOM   -   Bolton</option>
+		<option value="34">UNITED KINGDOM   -   Bournemouth</option>
+		<option value="35">UNITED KINGDOM   -   Bradford</option>
+		<option value="36">UNITED KINGDOM   -   Brighton</option>
+		<option value="37">UNITED KINGDOM   -   Bristol</option>
+		<option value="38">UNITED KINGDOM   -   Bromley</option>
+		<option value="39">UNITED KINGDOM   -   Cambridge</option>
+		<option value="40">UNITED KINGDOM   -   Canterbury</option>
+		<option value="41">UNITED KINGDOM   -   Cardiff</option>
+		<option value="42">UNITED KINGDOM   -   Carlisle</option>
+		<option value="43">UNITED KINGDOM   -   Chelmsford</option>
+		<option value="44">UNITED KINGDOM   -   Chester</option>
+		<option value="45">UNITED KINGDOM   -   Cleveland</option>
+		<option value="46">UNITED KINGDOM   -   Colchester</option>
+		<option value="47">UNITED KINGDOM   -   Coventry</option>
+		<option value="48">UNITED KINGDOM   -   Crewe</option>
+		<option value="49">UNITED KINGDOM   -   Croydon</option>
+		<option value="50">UNITED KINGDOM   -   Darlington</option>
+		<option value="51">UNITED KINGDOM   -   Dartford</option>
+		<option value="52">UNITED KINGDOM   -   Derby</option>
+		<option value="53">UNITED KINGDOM   -   Doncaster</option>
+		<option value="54">UNITED KINGDOM   -   Dorchester</option>
+		<option value="55">UNITED KINGDOM   -   Dudley</option>
+		<option value="56">UNITED KINGDOM   -   Dumfries</option>
+		<option value="57">UNITED KINGDOM   -   Dundee</option>
+		<option value="59">UNITED KINGDOM   -   Durham</option>
+		<option value="60">UNITED KINGDOM   -   Edinburgh</option>
+		<option value="61">UNITED KINGDOM   -   Enfield</option>
+		<option value="62">UNITED KINGDOM   -   Exeter</option>
+		<option value="63">UNITED KINGDOM   -   Falkirk</option>
+		<option value="64">UNITED KINGDOM   -   Galashiels</option>
+		<option value="65">UNITED KINGDOM   -   Glasgow</option>
+		<option value="66">UNITED KINGDOM   -   Gloucester</option>
+		<option value="67">UNITED KINGDOM   -   Guernsey</option>
+		<option value="68">UNITED KINGDOM   -   Guildford</option>
+		<option value="69">UNITED KINGDOM   -   Halifax</option>
+		<option value="70">UNITED KINGDOM   -   Harrogate</option>
+		<option value="71">UNITED KINGDOM   -   Harrow</option>
+		<option value="72">UNITED KINGDOM   -   Hemel Hempstead</option>
+		<option value="73">UNITED KINGDOM   -   Hereford</option>
+		<option value="74">UNITED KINGDOM   -   Huddersfield</option>
+		<option value="75">UNITED KINGDOM   -   Hull</option>
+		<option value="76">UNITED KINGDOM   -   Ilford</option>
+		<option value="77">UNITED KINGDOM   -   Inverness</option>
+		<option value="78">UNITED KINGDOM   -   Ipswich</option>
+		<option value="79">UNITED KINGDOM   -   Isle of man</option>
+		<option value="234">UNITED KINGDOM   -   Isle of Wight</option>
+		<option value="80">UNITED KINGDOM   -   Jersey</option>
+		<option value="233">UNITED KINGDOM   -   Kent</option>
+		<option value="81">UNITED KINGDOM   -   Kilmarnock</option>
+		<option value="82">UNITED KINGDOM   -   Kingston upon Thames</option>
+		<option value="83">UNITED KINGDOM   -   Kirkcaldy</option>
+		<option value="84">UNITED KINGDOM   -   Kirkwall</option>
+		<option value="85">UNITED KINGDOM   -   Lancaster</option>
+		<option value="86">UNITED KINGDOM   -   Leeds</option>
+		<option value="87">UNITED KINGDOM   -   Leicester</option>
+		<option value="88">UNITED KINGDOM   -   Lerwick</option>
+		<option value="89">UNITED KINGDOM   -   Lincoln</option>
+		<option value="90">UNITED KINGDOM   -   Liverpool</option>
+		<option value="91">UNITED KINGDOM   -   Llandrindod Wells</option>
+		<option value="92">UNITED KINGDOM   -   Llandudno</option>
+		<option value="93">UNITED KINGDOM   -   London</option>
+		<option value="101">UNITED KINGDOM   -   Luton</option>
+		<option value="102">UNITED KINGDOM   -   Manchester</option>
+		<option value="103">UNITED KINGDOM   -   Medway</option>
+		<option value="104">UNITED KINGDOM   -   Milton Keynes</option>
+		<option value="105">UNITED KINGDOM   -   Motherwell</option>
+		<option value="106">UNITED KINGDOM   -   Newcastle upon Tyne</option>
+		<option value="107">UNITED KINGDOM   -   Newport</option>
+		<option value="108">UNITED KINGDOM   -   Northampton</option>
+		<option value="109">UNITED KINGDOM   -   Norwich</option>
+		<option value="110">UNITED KINGDOM   -   Nottingham</option>
+		<option value="111">UNITED KINGDOM   -   Oldham</option>
+		<option value="112">UNITED KINGDOM   -   Oxford</option>
+		<option value="113">UNITED KINGDOM   -   Paisley</option>
+		<option value="114">UNITED KINGDOM   -   Perth</option>
+		<option value="115">UNITED KINGDOM   -   Peterborough</option>
+		<option value="116">UNITED KINGDOM   -   Plymouth</option>
+		<option value="117">UNITED KINGDOM   -   Portsmouth</option>
+		<option value="118">UNITED KINGDOM   -   Preston</option>
+		<option value="119">UNITED KINGDOM   -   Reading</option>
+		<option value="120">UNITED KINGDOM   -   Redhill</option>
+		<option value="121">UNITED KINGDOM   -   Romford</option>
+		<option value="122">UNITED KINGDOM   -   Salisbury</option>
+		<option value="123">UNITED KINGDOM   -   Sheffield</option>
+		<option value="124">UNITED KINGDOM   -   Shrewsbury</option>
+		<option value="125">UNITED KINGDOM   -   Slough</option>
+		<option value="126">UNITED KINGDOM   -   Southall</option>
+		<option value="127">UNITED KINGDOM   -   Southampton</option>
+		<option value="128">UNITED KINGDOM   -   Southend-on-Sea</option>
+		<option value="129">UNITED KINGDOM   -   St. Albans</option>
+		<option value="130">UNITED KINGDOM   -   Stevenage</option>
+		<option value="203">UNITED KINGDOM   -   Stirling</option>
+		<option value="131">UNITED KINGDOM   -   Stockport</option>
+		<option value="132">UNITED KINGDOM   -   Stoke-on-Trent</option>
+		<option value="133">UNITED KINGDOM   -   Sunderland</option>
+		<option value="134">UNITED KINGDOM   -   Sutton</option>
+		<option value="135">UNITED KINGDOM   -   Swansea</option>
+		<option value="136">UNITED KINGDOM   -   Swindon</option>
+		<option value="137">UNITED KINGDOM   -   Taunton</option>
+		<option value="138">UNITED KINGDOM   -   Telford</option>
+		<option value="139">UNITED KINGDOM   -   Tonbridge</option>
+		<option value="140">UNITED KINGDOM   -   Torquay</option>
+		<option value="141">UNITED KINGDOM   -   Truro</option>
+		<option value="142">UNITED KINGDOM   -   Twickenham</option>
+		<option value="143">UNITED KINGDOM   -   Wakefield</option>
+		<option value="144">UNITED KINGDOM   -   Walsall</option>
+		<option value="145">UNITED KINGDOM   -   Warrington</option>
+		<option value="232">UNITED KINGDOM   -   Warwickshire</option>
+		<option value="146">UNITED KINGDOM   -   Watford</option>
+		<option value="147">UNITED KINGDOM   -   Western Isles</option>
+		<option value="148">UNITED KINGDOM   -   Wigan</option>
+		<option value="149">UNITED KINGDOM   -   Wolverhampton</option>
+		<option value="151">UNITED KINGDOM   -   Worcester</option>
+		<option value="274">UNITED KINGDOM   -   Worthing</option>
+		<option value="152">UNITED KINGDOM   -   York</option>
+		<option value="153">UNITED STATES   -   Alabama</option>
+		<option value="154">UNITED STATES   -   Alaska</option>
+		<option value="155">UNITED STATES   -   Arizona</option>
+		<option value="156">UNITED STATES   -   Arkansas</option>
+		<option value="157">UNITED STATES   -   California</option>
+		<option value="158">UNITED STATES   -   Colorado</option>
+		<option value="159">UNITED STATES   -   Connecticut</option>
+		<option value="160">UNITED STATES   -   Delaware</option>
+		<option value="161">UNITED STATES   -   Florida</option>
+		<option value="162">UNITED STATES   -   Georgia</option>
+		<option value="163">UNITED STATES   -   Hawaii</option>
+		<option value="164">UNITED STATES   -   Idaho</option>
+		<option value="165">UNITED STATES   -   Illinois</option>
+		<option value="166">UNITED STATES   -   Indiana</option>
+		<option value="167">UNITED STATES   -   Iowa</option>
+		<option value="168">UNITED STATES   -   Kansas</option>
+		<option value="169">UNITED STATES   -   Kentucky</option>
+		<option value="170">UNITED STATES   -   Louisiana</option>
+		<option value="171">UNITED STATES   -   Maine</option>
+		<option value="172">UNITED STATES   -   Maryland</option>
+		<option value="173">UNITED STATES   -   Massachusetts</option>
+		<option value="174">UNITED STATES   -   Michigan</option>
+		<option value="175">UNITED STATES   -   Minnesota</option>
+		<option value="176">UNITED STATES   -   Mississippi</option>
+		<option value="177">UNITED STATES   -   Missouri</option>
+		<option value="178">UNITED STATES   -   Montana</option>
+		<option value="179">UNITED STATES   -   Nebraska</option>
+		<option value="180">UNITED STATES   -   Nevada</option>
+		<option value="181">UNITED STATES   -   New Hampshire</option>
+		<option value="182">UNITED STATES   -   New Jersey</option>
+		<option value="183">UNITED STATES   -   New Mexico</option>
+		<option value="184">UNITED STATES   -   New York</option>
+		<option value="185">UNITED STATES   -   North Carolina</option>
+		<option value="186">UNITED STATES   -   North Dakota</option>
+		<option value="187">UNITED STATES   -   Ohio</option>
+		<option value="188">UNITED STATES   -   Oklahoma</option>
+		<option value="189">UNITED STATES   -   Oregon</option>
+		<option value="190">UNITED STATES   -   Pennsylvania</option>
+		<option value="191">UNITED STATES   -   Rhode Island</option>
+		<option value="192">UNITED STATES   -   South Carolina</option>
+		<option value="193">UNITED STATES   -   South Dakota</option>
+		<option value="194">UNITED STATES   -   Tennessee</option>
+		<option value="195">UNITED STATES   -   Texas</option>
+		<option value="196">UNITED STATES   -   Utah</option>
+		<option value="197">UNITED STATES   -   Vermont</option>
+		<option value="198">UNITED STATES   -   Virginia</option>
+		<option value="199">UNITED STATES   -   Washington</option>
+		<option value="231">UNITED STATES   -   Washington D.C.</option>
+		<option value="200">UNITED STATES   -   West Virginia</option>
+		<option value="201">UNITED STATES   -   Wisconsin</option>
+		<option value="202">UNITED STATES   -   Wyoming</option>
+
+	</select>
+</noscript>
+									
+								</fieldset>
+								
+								
+							</div>
+							<div class="form-section last">
+								
+								<fieldset class="fieldset-old no-border--bottom pb0">
+									<label class="checkbox"><input id="ctl00_cphMain_registrationForm_termsAgree" type="checkbox" name="ctl00$cphMain$registrationForm$termsAgree" /> I have read and accepted StarNow's <a href='/terms-and-conditions/' target='_blank'>Terms of Use</a>, <a href='/privacy-policy/' target='_blank'>Privacy Policy</a> and <a href='/privacy-policy#general-collection-policy' target='_blank'>General Collection Policy</a>.</label>
+	
+									
+								</fieldset>
+							</div>
+						
+</div>
+
+						
+						
+
+					<div class="form-actions form-actions--flex"><input type="submit" name="ctl00$cphMain$registrationForm$submitButton" value="Register" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphMain$registrationForm$submitButton&quot;, &quot;&quot;, true, &quot;RegistrationForm&quot;, &quot;&quot;, false, false))" id="ctl00_cphMain_registrationForm_submitButton" class="button form-actions__primary-button" /></div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+	
+
+
+<script nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU">
+	var onRCSubmit = function (token) {
+		__doPostBack('ctl00$cphMain$registrationForm$submitButton','ctl00_cphMain_registrationForm_submitButton')
+	};
+
+	var onRCLoadCallback = function () {
+		grecaptcha.render('ctl00_cphMain_registrationForm_submitButton', {
+			'sitekey': '6LeWVCoUAAAAAJtITpSsOKx_t3byPkGb6VOfQaE4',
+			'callback': onRCSubmit
+		});
+	};
+</script>
+<script nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU" src="https://www.google.com/recaptcha/api.js?onload=onRCLoadCallback&render=explicit" async defer></script>
+
+
+    <script src="https://staticsn.com/_scripts/all.js?v=thVZE0_lcCkZjXnygKzH7i6gf1yVKWxWIkarfIMTM_Q1"></script>
+<script src="https://staticsn.com/_scripts/vendor.js?v=H75mSAhi0C-BDxUYEGhELxQ602S44uwAPdGPe_LULJU1"></script>
+<script src="https://staticsn.com/_scripts/facebook.js?v=YDrH5w3AxJEUJ04547EFa6kF96TsBwnshDZK0IcK0J81"></script>
+<script src="https://staticsn.com/_scripts/cookiesPopup.js?v=F4bW1SwmCa09jJomDxbQsVMiSsdsEvElJgFj0cEw-Rc1"></script>
+<script src="https://staticsn.com/_scripts/cat_selector.js?v=R4H-G7QzJbe3f5qbMZ0p8k-ZC7gzUA0RNdJHcJQhAG01"></script>
+<script src="https://staticsn.com/_scripts/credentialsComponent.js?v=qBptLyagEERJrCpyqZkLupWPjEdvSxwlQrSdXlj6PTo1"></script>
+
+
+    
+	
+
+    <script nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU">
+$(function(){starnow.setInitialVisibility();});
+var arrRegions = new Array();
+arrRegions[2] = [{value: 0, text: 'Choose state...'}, {value: 0, text: ''}, {value: 19, text: 'ACT'}, {value: 20, text: 'New South Wales'}, {value: 21, text: 'Northern Territory'}, {value: 22, text: 'Queensland'}, {value: 23, text: 'South Australia'}, {value: 24, text: 'Tasmania'}, {value: 25, text: 'Victoria'}, {value: 26, text: 'Western Australia'}];
+arrRegions[5] = [{value: 0, text: 'Choose region...'}, {value: 0, text: ''}, {value: 204, text: 'Alberta'}, {value: 205, text: 'British Columbia'}, {value: 206, text: 'Manitoba'}, {value: 207, text: 'New Brunswick'}, {value: 208, text: 'Newfoundland and Labrador'}, {value: 209, text: 'Northwest Territories'}, {value: 210, text: 'Nova Scotia'}, {value: 211, text: 'Nunavut'}, {value: 212, text: 'Ontario'}, {value: 213, text: 'Prince Edward Island'}, {value: 214, text: 'Quebec'}, {value: 215, text: 'Saskatchewan'}, {value: 216, text: 'Yukon'}];
+arrRegions[73] = [{value: 0, text: 'Choose region...'}, {value: 0, text: ''}, {value: 235, text: 'Alsace'}, {value: 236, text: 'Aquitaine'}, {value: 237, text: 'Auvergne'}, {value: 238, text: 'Basse-Normandie'}, {value: 239, text: 'Bourgogne'}, {value: 240, text: 'Bretagne'}, {value: 241, text: 'Centre'}, {value: 242, text: 'Champagne-Ardenne'}, {value: 243, text: 'Corse'}, {value: 244, text: 'Franche-Comté'}, {value: 245, text: 'Haute-Normandie'}, {value: 246, text: 'Ile-de-France'}, {value: 247, text: 'Languedoc-Roussillon'}, {value: 248, text: 'Limousin'}, {value: 249, text: 'Lorraine'}, {value: 250, text: 'Midi-Pyrénées'}, {value: 251, text: 'Nord-Pas-de-Calais'}, {value: 252, text: 'Pays de la Loire'}, {value: 253, text: 'Picardie'}, {value: 254, text: 'Poitou-Charentes'}, {value: 255, text: 'Provence-Alpes-Côte d\'Azur'}, {value: 256, text: 'Rhône-Alpes'}];
+arrRegions[79] = [{value: 0, text: 'Choose state...'}, {value: 0, text: ''}, {value: 257, text: 'Baden-Württemberg'}, {value: 258, text: 'Bayern'}, {value: 259, text: 'Berlin'}, {value: 260, text: 'Brandenburg'}, {value: 261, text: 'Bremen'}, {value: 262, text: 'Hamburg'}, {value: 263, text: 'Hessen'}, {value: 264, text: 'Mecklenburg-Vorpommern'}, {value: 265, text: 'Niedersachsen'}, {value: 266, text: 'Nordrhein-Westfalen'}, {value: 267, text: 'Rheinland-Pfalz'}, {value: 268, text: 'Saarland'}, {value: 269, text: 'Sachsen'}, {value: 270, text: 'Sachsen-Anhalt'}, {value: 271, text: 'Schleswig-Holstein'}, {value: 272, text: 'Thüringen'}];
+arrRegions[7] = [{value: 0, text: 'Choose region...'}, {value: 0, text: ''}, {value: 217, text: 'Dublin Region'}, {value: 273, text: 'Midland Region'}, {value: 221, text: 'North-West Region'}, {value: 218, text: 'South-East Region'}, {value: 220, text: 'South-West Region'}, {value: 219, text: 'Western Region'}];
+arrRegions[1] = [{value: 0, text: 'Choose region...'}, {value: 0, text: ''}, {value: 2, text: 'Auckland'}, {value: 4, text: 'Bay Of Plenty'}, {value: 15, text: 'Canterbury'}, {value: 5, text: 'Gisborne'}, {value: 6, text: 'Hawkes Bay'}, {value: 9, text: 'Manawatu'}, {value: 13, text: 'Marlborough'}, {value: 12, text: 'Nelson Bays'}, {value: 1, text: 'Northland'}, {value: 17, text: 'Otago'}, {value: 18, text: 'Southland'}, {value: 7, text: 'Taranaki'}, {value: 16, text: 'Timaru/Oamaru'}, {value: 3, text: 'Waikato'}, {value: 10, text: 'Wairarapa'}, {value: 8, text: 'Wanganui'}, {value: 11, text: 'Wellington'}, {value: 14, text: 'West Coast'}];
+arrRegions[6] = [{value: 0, text: 'Choose region...'}, {value: 0, text: ''}, {value: 222, text: 'Eastern Cape'}, {value: 223, text: 'Free State'}, {value: 224, text: 'Gauteng'}, {value: 225, text: 'Kwazulu Natal'}, {value: 226, text: 'Limpopo'}, {value: 227, text: 'Mpumalanga'}, {value: 228, text: 'North West'}, {value: 229, text: 'Northern Cape'}, {value: 230, text: 'Western Cape'}];
+arrRegions[3] = [{value: 0, text: 'Choose region...'}, {value: 0, text: ''}, {value: 27, text: 'Aberdeen'}, {value: 28, text: 'Bath'}, {value: 29, text: 'Belfast'}, {value: 30, text: 'Birmingham'}, {value: 31, text: 'Blackburn'}, {value: 32, text: 'Blackpool'}, {value: 33, text: 'Bolton'}, {value: 34, text: 'Bournemouth'}, {value: 35, text: 'Bradford'}, {value: 36, text: 'Brighton'}, {value: 37, text: 'Bristol'}, {value: 38, text: 'Bromley'}, {value: 39, text: 'Cambridge'}, {value: 40, text: 'Canterbury'}, {value: 41, text: 'Cardiff'}, {value: 42, text: 'Carlisle'}, {value: 43, text: 'Chelmsford'}, {value: 44, text: 'Chester'}, {value: 45, text: 'Cleveland'}, {value: 46, text: 'Colchester'}, {value: 47, text: 'Coventry'}, {value: 48, text: 'Crewe'}, {value: 49, text: 'Croydon'}, {value: 50, text: 'Darlington'}, {value: 51, text: 'Dartford'}, {value: 52, text: 'Derby'}, {value: 53, text: 'Doncaster'}, {value: 54, text: 'Dorchester'}, {value: 55, text: 'Dudley'}, {value: 56, text: 'Dumfries'}, {value: 57, text: 'Dundee'}, {value: 59, text: 'Durham'}, {value: 60, text: 'Edinburgh'}, {value: 61, text: 'Enfield'}, {value: 62, text: 'Exeter'}, {value: 63, text: 'Falkirk'}, {value: 64, text: 'Galashiels'}, {value: 65, text: 'Glasgow'}, {value: 66, text: 'Gloucester'}, {value: 67, text: 'Guernsey'}, {value: 68, text: 'Guildford'}, {value: 69, text: 'Halifax'}, {value: 70, text: 'Harrogate'}, {value: 71, text: 'Harrow'}, {value: 72, text: 'Hemel Hempstead'}, {value: 73, text: 'Hereford'}, {value: 74, text: 'Huddersfield'}, {value: 75, text: 'Hull'}, {value: 76, text: 'Ilford'}, {value: 77, text: 'Inverness'}, {value: 78, text: 'Ipswich'}, {value: 79, text: 'Isle of man'}, {value: 234, text: 'Isle of Wight'}, {value: 80, text: 'Jersey'}, {value: 233, text: 'Kent'}, {value: 81, text: 'Kilmarnock'}, {value: 82, text: 'Kingston upon Thames'}, {value: 83, text: 'Kirkcaldy'}, {value: 84, text: 'Kirkwall'}, {value: 85, text: 'Lancaster'}, {value: 86, text: 'Leeds'}, {value: 87, text: 'Leicester'}, {value: 88, text: 'Lerwick'}, {value: 89, text: 'Lincoln'}, {value: 90, text: 'Liverpool'}, {value: 91, text: 'Llandrindod Wells'}, {value: 92, text: 'Llandudno'}, {value: 93, text: 'London'}, {value: 101, text: 'Luton'}, {value: 102, text: 'Manchester'}, {value: 103, text: 'Medway'}, {value: 104, text: 'Milton Keynes'}, {value: 105, text: 'Motherwell'}, {value: 106, text: 'Newcastle upon Tyne'}, {value: 107, text: 'Newport'}, {value: 108, text: 'Northampton'}, {value: 109, text: 'Norwich'}, {value: 110, text: 'Nottingham'}, {value: 111, text: 'Oldham'}, {value: 112, text: 'Oxford'}, {value: 113, text: 'Paisley'}, {value: 114, text: 'Perth'}, {value: 115, text: 'Peterborough'}, {value: 116, text: 'Plymouth'}, {value: 117, text: 'Portsmouth'}, {value: 118, text: 'Preston'}, {value: 119, text: 'Reading'}, {value: 120, text: 'Redhill'}, {value: 121, text: 'Romford'}, {value: 122, text: 'Salisbury'}, {value: 123, text: 'Sheffield'}, {value: 124, text: 'Shrewsbury'}, {value: 125, text: 'Slough'}, {value: 126, text: 'Southall'}, {value: 127, text: 'Southampton'}, {value: 128, text: 'Southend-on-Sea'}, {value: 129, text: 'St. Albans'}, {value: 130, text: 'Stevenage'}, {value: 203, text: 'Stirling'}, {value: 131, text: 'Stockport'}, {value: 132, text: 'Stoke-on-Trent'}, {value: 133, text: 'Sunderland'}, {value: 134, text: 'Sutton'}, {value: 135, text: 'Swansea'}, {value: 136, text: 'Swindon'}, {value: 137, text: 'Taunton'}, {value: 138, text: 'Telford'}, {value: 139, text: 'Tonbridge'}, {value: 140, text: 'Torquay'}, {value: 141, text: 'Truro'}, {value: 142, text: 'Twickenham'}, {value: 143, text: 'Wakefield'}, {value: 144, text: 'Walsall'}, {value: 145, text: 'Warrington'}, {value: 232, text: 'Warwickshire'}, {value: 146, text: 'Watford'}, {value: 147, text: 'Western Isles'}, {value: 148, text: 'Wigan'}, {value: 149, text: 'Wolverhampton'}, {value: 151, text: 'Worcester'}, {value: 274, text: 'Worthing'}, {value: 152, text: 'York'}];
+arrRegions[4] = [{value: 0, text: 'Choose state...'}, {value: 0, text: ''}, {value: 153, text: 'Alabama'}, {value: 154, text: 'Alaska'}, {value: 155, text: 'Arizona'}, {value: 156, text: 'Arkansas'}, {value: 157, text: 'California'}, {value: 158, text: 'Colorado'}, {value: 159, text: 'Connecticut'}, {value: 160, text: 'Delaware'}, {value: 161, text: 'Florida'}, {value: 162, text: 'Georgia'}, {value: 163, text: 'Hawaii'}, {value: 164, text: 'Idaho'}, {value: 165, text: 'Illinois'}, {value: 166, text: 'Indiana'}, {value: 167, text: 'Iowa'}, {value: 168, text: 'Kansas'}, {value: 169, text: 'Kentucky'}, {value: 170, text: 'Louisiana'}, {value: 171, text: 'Maine'}, {value: 172, text: 'Maryland'}, {value: 173, text: 'Massachusetts'}, {value: 174, text: 'Michigan'}, {value: 175, text: 'Minnesota'}, {value: 176, text: 'Mississippi'}, {value: 177, text: 'Missouri'}, {value: 178, text: 'Montana'}, {value: 179, text: 'Nebraska'}, {value: 180, text: 'Nevada'}, {value: 181, text: 'New Hampshire'}, {value: 182, text: 'New Jersey'}, {value: 183, text: 'New Mexico'}, {value: 184, text: 'New York'}, {value: 185, text: 'North Carolina'}, {value: 186, text: 'North Dakota'}, {value: 187, text: 'Ohio'}, {value: 188, text: 'Oklahoma'}, {value: 189, text: 'Oregon'}, {value: 190, text: 'Pennsylvania'}, {value: 191, text: 'Rhode Island'}, {value: 192, text: 'South Carolina'}, {value: 193, text: 'South Dakota'}, {value: 194, text: 'Tennessee'}, {value: 195, text: 'Texas'}, {value: 196, text: 'Utah'}, {value: 197, text: 'Vermont'}, {value: 198, text: 'Virginia'}, {value: 199, text: 'Washington'}, {value: 231, text: 'Washington D.C.'}, {value: 200, text: 'West Virginia'}, {value: 201, text: 'Wisconsin'}, {value: 202, text: 'Wyoming'}];
+
+$(function(){starnow.initPageChrome();});
+
+		$(function () {
+			var propsConfig = {"displayType":1,"emailAddress":"","password":"","rememberMe":false,"displayRememberMe":true,"isBackstageAuthenticated":false,"hasPasswordError":false,"emailValidationError":0,"passwordValidationResult":null,"global":{"staticUrl":"https://staticsn.com","starNowApiUrl":"https://api.starnow.com"},"session":{"guid":"C539A5D1-BE9C-4128-8089-2FC2E87CC68A","skinUrl":"starnow.com","trackOrigin":"untracked","trackSession":"untracked","member":{"memberID":0,"name":""}}}
+			const registerCredentialsRoot = document.getElementById("registerCredentialsContainer")
+			if (registerCredentialsRoot) {
+				ReactDOM.hydrate(
+				React.createElement(Components.CredentialsComponent, propsConfig),
+				registerCredentialsRoot);
+			}
+		});
+	
+
+		$(function () {
+			var propsConfig = {"categoryIDs":null,"initialSelectedCategories":[],"initialSelectedSubCategories":[],"initialPendingCategoryID":0,"cancelURL":null,"categories":[{"categoryID":10,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Acting","value":"10"},{"categoryID":131,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Extras","value":"131"},{"categoryID":8,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Modelling","value":"8"},{"categoryID":151,"categoryIDs":null,"childCategories":[{"categoryID":152,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Beauty","value":"152"},{"categoryID":153,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Fashion","value":"153"},{"categoryID":154,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Fitness","value":"154"},{"categoryID":155,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Food","value":"155"},{"categoryID":164,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Gaming & Technology","value":"164"},{"categoryID":156,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Health","value":"156"},{"categoryID":161,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Influencer Scouts","value":"161"},{"categoryID":163,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Live Events","value":"163"},{"categoryID":157,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Men's Products","value":"157"},{"categoryID":162,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Music","value":"162"},{"categoryID":158,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Parenting","value":"158"},{"categoryID":159,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Travel","value":"159"},{"categoryID":160,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Other","value":"160"}],"disabled":false,"group":null,"selected":false,"text":"Influencer","value":"151"},{"categoryID":147,"categoryIDs":null,"childCategories":[{"categoryID":148,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"TV","value":"148"},{"categoryID":149,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Radio","value":"149"},{"categoryID":150,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Other","value":"150"}],"disabled":false,"group":null,"selected":false,"text":"Presenter","value":"147"},{"categoryID":12,"categoryIDs":null,"childCategories":[{"categoryID":52,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Singing","value":"52"},{"categoryID":47,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Guitar","value":"47"},{"categoryID":55,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Bass Guitar","value":"55"},{"categoryID":46,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Drums","value":"46"},{"categoryID":48,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Piano/Keyboard","value":"48"},{"categoryID":45,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Composing","value":"45"},{"categoryID":49,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Production","value":"49"},{"categoryID":43,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Bands wanted","value":"43"},{"categoryID":101,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"DJing","value":"101"},{"categoryID":103,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Rapper","value":"103"},{"categoryID":54,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Other","value":"54"}],"disabled":false,"group":null,"selected":false,"text":"Musician","value":"12"},{"categoryID":80,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Photography","value":"80"},{"categoryID":1,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"TV & Reality","value":"1"},{"categoryID":7,"categoryIDs":null,"childCategories":[{"categoryID":20,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Dancer","value":"20"},{"categoryID":21,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Teacher & Choreographer","value":"21"}],"disabled":false,"group":null,"selected":false,"text":"Dancing","value":"7"},{"categoryID":58,"categoryIDs":null,"childCategories":[{"categoryID":146,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Writing or Directing","value":"146"},{"categoryID":112,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Art Department or Costume","value":"112"},{"categoryID":115,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Camera","value":"115"},{"categoryID":113,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Lighting","value":"113"},{"categoryID":117,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Post Production & Editing","value":"117"},{"categoryID":81,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Production Management","value":"81"},{"categoryID":114,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Runner or Assistant","value":"114"},{"categoryID":116,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Sound","value":"116"},{"categoryID":82,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Other","value":"82"}],"disabled":false,"group":null,"selected":false,"text":"Film & Stage Crew","value":"58"},{"categoryID":107,"categoryIDs":null,"childCategories":[{"categoryID":108,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Hair Stylist","value":"108"},{"categoryID":109,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Makeup Artist","value":"109"},{"categoryID":110,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Fashion Stylist","value":"110"}],"disabled":false,"group":null,"selected":false,"text":"Hair, Makeup, & Styling","value":"107"},{"categoryID":130,"categoryIDs":null,"childCategories":[],"disabled":false,"group":null,"selected":false,"text":"Survival Jobs","value":"130"}],"showSubmit":false,"isLeftAligned":true,"isRadio":false,"isAdvertiser":false,"selectedCategoryID":null,"showExperienceLevelHint":false,"shouldRenderInputs":true,"global":{"staticUrl":"https://staticsn.com","starNowApiUrl":"https://api.starnow.com"},"session":{"guid":"C539A5D1-BE9C-4128-8089-2FC2E87CC68A","skinUrl":"starnow.com","trackOrigin":"untracked","trackSession":"untracked","member":{"memberID":0,"name":""}}}
+			const categoriesRoot = document.getElementById("talentRegisterCategories")
+			if (categoriesRoot) {
+				ReactDOM.hydrate(
+					React.createElement(Components.ProfileCategoryList, propsConfig),
+					categoriesRoot
+				);
+			}
+		});
+	
+</script>
+
+
+	
+	
+
+<script nonce=Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-30091508-1', 'auto');
+ga('send', 'pageview');
+</script>
+	
+<script nonce="Qj3Sas9yPw0n3xt4kGuq0bi6HH0eFEwU">
+	!function (f, b, e, v, n, t, s) {
+		if (f.fbq) return; n = f.fbq = function () {
+			n.callMethod ?
+			n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+		};
+		if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+		n.queue = []; t = b.createElement(e); t.async = !0;
+		t.src = v; s = b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t, s)
+	}(window, document, 'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+	
+	fbq('set', 'autoConfig', 'false', '877372459094193');
+	fbq('init', '877372459094193');
+</script>
+
+	
+
+
+
+	
+
+
+<div id="outdated">
+	<h6>Your browser version is outdated</h6>
+	<p>Some site features may not work properly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+	<p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+
+
+</body>
+</html>
