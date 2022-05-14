@@ -175,12 +175,28 @@
                         List a<span class="dn di-l">n audition or</span> Job
                     </a>
 
-                    <a href="signin/index.html" rel="nofollow" class=" nav-login__btn  button button--rounded fw6 button--charcoal nav-login--full">
-                        Sign in
+                    @if(!auth()->check())
+                    <a href="{{route('worker.login')}}" rel="nofollow" class=" nav-login__btn  button button--rounded fw6 button--charcoal nav-login--full">
+                        Sign in as Worker
                     </a>
-                    <a href="{{route('signup')}}" rel="nofollow" class=" nav-login__btn  button button--rounded fw6  nav-login__item--show-large-phone-up  nav__btn--accented nav-login--full">
+                    <a href="{{route('client.login')}}" rel="nofollow" class=" nav-login__btn  button button--rounded fw6 button--charcoal nav-login--full">
+                        Sign in as Client
+                    </a>
+                    <a href="{{route('signup.as')}}" rel="nofollow" class=" nav-login__btn  button button--rounded fw6  nav-login__item--show-large-phone-up  nav__btn--accented nav-login--full">
                         Join
                     </a>
+                    @else
+                    <a href="" rel="nofollow" class=" nav-login__btn  button button--rounded fw6 button--charcoal nav-login--full">
+                        Profile
+                    </a>
+                    <form action="{{ route("worker.logout") }}" method="post">
+                        @csrf
+                        <button type="submit" rel="nofollow" style="cursor:pointer !important;" class=" nav-login__btn  button button--rounded fw6  nav-login__item--show-large-phone-up  nav__btn--accented nav-login--full">
+                            Logout
+                        </button>
+                     </form>
+                    @endif
+                    
 
 
 

@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  
+    public function signUpAs()
+    {
+        return view('frontend.signup-as');
+    }
+
     public function index()
     {
         return view('home');
@@ -36,16 +38,7 @@ class PageController extends Controller
         return view('frontend.placelisting');
     }
 
-    public function signup()
-    {
-        return view('frontend.signup');
-    }
-    public function findTalent()
-    {
-        return view('frontend.find-talent');
-    }
-    public function findWork()
-    {
-        return view('frontend.find-work');
-    }
+    
+    
+    
 }
