@@ -21,6 +21,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'first_name',
+        'last_name',
+        'username',
+        'phone',
+        'country',
+        'dob',
+        'profile_photo',
+        'gender',
+        'type',
     ];
 
     /**
@@ -41,4 +50,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getFullNameAttribute()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
+    public function client(){
+        return $this->hasOne(Client::class);
+    }
+
+    public function worker(){
+        return $this->hasOne(Worker::class);
+    }
 }
