@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield("title")</title>
-    @include('layouts.global-styles')
+    @include('layouts.global-panel-styles')
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 
     @yield('content')
 
-    @include('layouts.global-scripts')
+    @include('layouts.global-panel-scripts')
 
 </body>
 

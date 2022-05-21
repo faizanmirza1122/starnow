@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Admin | All Worker Roles')
+@section('title', 'Admin | All Client Roles')
 
 @section('content')
     <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
@@ -19,12 +19,12 @@
                                         class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
                                         <div class="kt-portlet__head-label">
                                             <h3 class="kt-portlet__head-title">
-                                                All Worker Roles
+                                                All Client Roles
                                             </h3>
                                         </div>
                                         <div class="kt-portlet__head-toolbar">
                                             <div class="dropdown dropdown-inline">
-                                                <a href="{{ route('worker-roles.create') }}"
+                                                <a href="{{ route('client-roles.create') }}"
                                                     class="btn btn-primary">Create
                                                     new</a>
                                             </div>
@@ -40,10 +40,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($workerRoles as $workerRole)
+                                                @foreach ($clientRoles as $clientRole)
                                                     <tr>
-                                                        <td>{{ $workerRole->name }}</td>
-                                                        <td>{{ $workerRole->created_at->format('d F Y') }}</td>
+                                                        <td>{{ $clientRole->name }}</td>
+                                                        <td>{{ $clientRole->created_at->format('d F Y') }}</td>
                                                         <td>
                                                             <div class="dropdown">
                                                                 <div class="dropdown-toggle" data-toggle="dropdown">
@@ -51,17 +51,17 @@
                                                                 </div>
                                                                 <div class="dropdown-menu ">
                                                                     <a class="dropdown-item"
-                                                                        href="{{ route('worker-roles.edit', [$workerRole->id]) }}">
+                                                                        href="{{ route('client-roles.edit', [$clientRole->id]) }}">
                                                                         <i class="bi bi-pencil-square"></i>
                                                                         Edit
                                                                     </a>
                                                                     <a class="dropdown-item" href="#"
-                                                                        onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-users-{{ $workerRole->id }}-form').submit();}">
+                                                                        onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-users-{{ $clientRole->id }}-form').submit();}">
                                                                         <i class="bi bi-trash3-fill"></i> Delete
                                                                     </a>
                                                                     <form
-                                                                        action="{{ route('worker-roles.destroy', $workerRole->id) }}"
-                                                                        id="delete-users-{{ $workerRole->id }}-form"
+                                                                        action="{{ route('client-roles.destroy', $clientRole->id) }}"
+                                                                        id="delete-users-{{ $clientRole->id }}-form"
                                                                         method="POST" style="display: none;">
                                                                         @csrf
                                                                         @method('DELETE')
@@ -74,12 +74,12 @@
                                         </table>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                {{ $workerRoles->links() }}
+                                                {{ $clientRoles->links() }}
                                             </div>
                                             <div style="font-size:20px;">
-                                                Showing {{ ($workerRoles->currentpage() - 1) * $workerRoles->perpage() + 1 }} to
-                                                {{ ($workerRoles->currentpage() - 1) * $workerRoles->perpage() + $workerRoles->count() }}
-                                                of {{ $workerRoles->total() }} entries
+                                                Showing {{ ($clientRoles->currentpage() - 1) * $clientRoles->perpage() + 1 }} to
+                                                {{ ($clientRoles->currentpage() - 1) * $clientRoles->perpage() + $clientRoles->count() }}
+                                                of {{ $clientRoles->total() }} entries
                                             </div>
                                         </div>
                                     </div>

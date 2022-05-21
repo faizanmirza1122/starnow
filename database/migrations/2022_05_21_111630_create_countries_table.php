@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkerRolesTable extends Migration
+class CreateCountriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateWorkerRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('worker_roles', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
+            $table->string('name');
+            $table->string('code');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateWorkerRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('worker_roles');
+        Schema::dropIfExists('countries');
     }
 }

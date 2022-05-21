@@ -2,7 +2,7 @@
 {{-- mobile header start --}}
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     <div class="kt-header-mobile__logo">
-        <a href="{{ route("home") }}">
+        <a href="{{ route('admin.dashboard') }}">
             <img alt="Logo" src={{ asset('/images/logos/logo-2-sm.png') }}
             class="kt-header__brand-logo-sticky" />
         </a>
@@ -965,8 +965,7 @@
 
                                     <!--begin: Navigation -->
                                     <div class="kt-notification">
-                                        <a href="custom/apps/user/profile-1/personal-information.html"
-                                            class="kt-notification__item">
+                                        <a href="{{ route('admin.profile') }}" class="kt-notification__item">
                                             <div class="kt-notification__item-icon">
                                                 <i class="flaticon2-calendar-3 kt-font-success"></i>
                                             </div>

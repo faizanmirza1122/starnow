@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+         // Run country seeder
+         $this->call(CountrySeeder::class);
+
         // Admin 
         User::create([
             'first_name' => 'Star',
@@ -31,7 +34,7 @@ class DatabaseSeeder extends Seeder
             'phone' => '+1 (123) 456-2323',
             'gender' => 'male',
             'dob' => Carbon::parse('1995-01-01'),
-            'country' => 152
+            'country' => 168
         ]);
 
         // Client 
@@ -46,14 +49,14 @@ class DatabaseSeeder extends Seeder
             'phone' => '+1 (123) 456-1232',
             'gender' => 'male',
             'dob' => Carbon::parse('1995-01-01'),
-            'country' => 152
+            'country' => 168
         ]);
 
         Client::create([
             'user_id' => $client->id,
             'company_name' => 'Technologent',
             'website' => 'https://www.technologent.com',
-            'role' => ClientRoles::PRODUCTION_COMAPNY,
+            'role' => null,
         ]);
 
 
@@ -69,12 +72,15 @@ class DatabaseSeeder extends Seeder
             'phone' => '+1 (123) 456-7890',
             'gender' => 'male',
             'dob' => Carbon::parse('1995-01-01'),
-            'country' => 152
+            'country' => 168
         ]);
 
         Worker::create([
             'user_id' => $worker->id,
             'roles' => [],
         ]);
+
+
+       
     }
 }

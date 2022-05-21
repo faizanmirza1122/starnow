@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Worker;
 
 use App\Http\Controllers\Controller;
+use App\Models\Country;
 use App\Models\User;
 use App\Models\WorkerRole;
 use App\Utils\UserType;
@@ -18,7 +19,8 @@ class AuthController extends Controller
     public function findWork()
     {
         $workerRoles = WorkerRole::all();
-        return view('frontend.find-work', compact('workerRoles'));
+        $countries = Country::all();
+        return view('frontend.find-work', compact('workerRoles','countries'));
     }
 
     /**
@@ -93,6 +95,73 @@ class AuthController extends Controller
         request()->session()->flash('message', 'Invalid email or password.');
         return redirect()->back();
     }
+
+    /**
+     * show profile page
+     */
+    public function profile()
+    {
+        $user = auth()->user();
+        $countries = Country::all();
+        return view('worker.auth.profile', compact('user', 'countries'));
+    }
+
+    /**
+     * update worker profile
+     */
+
+    public function updateProfile(Request $request)
+    {
+        $data =  $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'username' => 'required|unique:users,username,' . auth()->user()->id,
+            'gender' => 'required',
+            'dob' => 'required',
+            'country' => 'required',
+            'phone' => 'required|unique:users,phone,' . auth()->user()->id,
+        ]);
+        auth()->user()->update($data);
+        request()->session()->flash('alert-class', 'alert-success');
+        request()->session()->flash('message', 'Profile updated successfully.');
+        return redirect()->back();
+    }
+
+
+    /**
+     * change worker password
+     */
+
+    public function changePassword(Request $request)
+    {
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required',
+            'confirm_password' => 'required',
+        ]);
+        $user = auth()->user();
+
+        if (Hash::check($request->old_password, $user->password)) {
+            if ($request->new_password == $request->confirm_password) {
+                $user->password = Hash::make($request->new_password);
+                $user->save();
+                request()->session()->flash('alert-class', 'alert-success');
+                request()->session()->flash('message', 'Password changed successfully');
+                return redirect()->back();
+            } else {
+                request()->session()->flash('alert-class', 'alert-danger');
+                request()->session()->flash('message', 'New password and confirm password does not match.');
+                return redirect()->back();
+            }
+        } else {
+            request()->session()->flash('alert-class', 'alert-danger');
+            request()->session()->flash('message', 'Old password does not match.');
+            return redirect()->back();
+        }
+    }
+
+
+
 
     /**
      *  Logout worker
