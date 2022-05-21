@@ -2,7 +2,8 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    @include('layouts.head')
+    @include('layouts.frontend-styles')
+    @yield('title')
 </head>
 
 <body>
@@ -18,7 +19,7 @@
     @endif
 
 
-    @include('layouts.scripts')
+    @include('layouts.frontend-scripts')
 
 </body>
 

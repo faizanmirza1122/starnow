@@ -235,17 +235,7 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es2015,es2016"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-    <nav class="nav nav--naked">
-        <div class="relative">
-
-            <a href="{{ route('home') }}" class="nav-logo--centered" tabindex="1" rel="home" title="Home">
-                <img src="/images/logo.png" class="nav-logo__image" alt="StarNow" width="110">
-            </a>
-
-
-        </div>
-    </nav>
-
+    @include('layouts.header')
 
     <div class="row page-spacer">
         <div class="small-12 columns">

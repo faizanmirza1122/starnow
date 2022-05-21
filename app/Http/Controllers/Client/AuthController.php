@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\ClientRole;
+use App\Models\Country;
 use App\Models\User;
 use App\Utils\UserType;
+use COM;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -16,7 +19,9 @@ class AuthController extends Controller
      */
     public function findTalent()
     {
-        return view('frontend.find-talent');
+        $clientRoles = ClientRole::all();
+        $countries = Country::all();
+        return view('frontend.find-talent', compact('clientRoles', 'countries'));
     }
 
     /**
@@ -90,6 +95,81 @@ class AuthController extends Controller
         } else {
             request()->session()->flash('alert-class', 'alert-danger');
             request()->session()->flash('message', 'Oops! invalid email or password');
+            return redirect()->back();
+        }
+    }
+
+
+    /**
+     * show profile page
+     */
+    public function profile()
+    {
+        $user = auth()->user();
+        $countries = Country::all();
+        $clientRoles = ClientRole::all();
+        return view('client.auth.profile', compact('user', 'countries', 'clientRoles'));
+    }
+
+    /**
+     * update worker profile
+     */
+
+    public function updateProfile(Request $request)
+    {
+        $user =  $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'username' => 'required|unique:users,username,' . auth()->user()->id,
+            'gender' => 'required',
+            'dob' => 'required',
+            'country' => 'required',
+            'phone' => 'required|unique:users,phone,' . auth()->user()->id,
+
+        ]);
+
+        $client = $request->validate([
+            'company_name' => 'required',
+            'website' => 'required',
+            'role' => 'required',
+        ]);
+
+        auth()->user()->update($user);
+        auth()->user()->client()->update($client);
+
+        request()->session()->flash('alert-class', 'alert-success');
+        request()->session()->flash('message', 'Profile updated successfully.');
+        return redirect()->back();
+    }
+
+
+    /**
+     * change password
+     */
+    public function changePassword(Request $request)
+    {
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required',
+            'confirm_password' => 'required',
+        ]);
+        $user = auth()->user();
+
+        if (Hash::check($request->old_password, $user->password)) {
+            if ($request->new_password == $request->confirm_password) {
+                $user->password = Hash::make($request->new_password);
+                $user->save();
+                request()->session()->flash('alert-class', 'alert-success');
+                request()->session()->flash('message', 'Password changed successfully');
+                return redirect()->back();
+            } else {
+                request()->session()->flash('alert-class', 'alert-danger');
+                request()->session()->flash('message', 'New password and confirm password does not match.');
+                return redirect()->back();
+            }
+        } else {
+            request()->session()->flash('alert-class', 'alert-danger');
+            request()->session()->flash('message', 'Old password does not match.');
             return redirect()->back();
         }
     }

@@ -186,7 +186,7 @@
                         Join
                     </a>
                     @else
-                    <a href="" rel="nofollow" class=" nav-login__btn  button button--rounded fw6 button--charcoal nav-login--full">
+                    <a href="{{ route("worker.profile") }}" rel="nofollow" class=" nav-login__btn  button button--rounded fw6 button--charcoal nav-login--full">
                         Profile
                     </a>
                     <form action="{{ route("worker.logout") }}" method="post">
