@@ -5,11 +5,11 @@ namespace Database\Seeders;
 use App\Models\Client;
 use App\Models\User;
 use App\Models\Worker;
-use App\Utils\ClientRoles;
 use App\Utils\UserType;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,8 +20,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         // Run country seeder
-         $this->call(CountrySeeder::class);
+        Schema::disableForeignKeyConstraints();
+
+        $this->call(ExperienceLevelSeeder::class);
+        $this->call(RequiredExperienceSeeder::class);
+        $this->call(CountrySeeder::class);
+        
+    Schema::enableForeignKeyConstraints();
 
         // Admin 
         User::create([
@@ -56,7 +61,7 @@ class DatabaseSeeder extends Seeder
             'user_id' => $client->id,
             'company_name' => 'Technologent',
             'website' => 'https://www.technologent.com',
-            'role' => null,
+            'role' => 1,
         ]);
 
 
