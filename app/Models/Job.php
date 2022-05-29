@@ -13,21 +13,21 @@ class Job extends Model
 
     public function requiredExperience()
     {
-        return $this->hasOne(RequiredExpreience::class);
+        return $this->belongsTo(RequiredExpreience::class);
     }
 
     public function experienceLevel()
     {
-        return $this->hasOne(ExpreienceLevel::class);
+        return $this->belongsTo(ExpreienceLevel::class);
     }
 
     public function tags()
     {
-        return $this->hasMany(Tag::class);
+        return $this->belongsToMany(Tag::class);
     }
 
     public function countries()
     {
-        return $this->hasMany(Country::class);
+        return $this->belongsTo(Country::class);
     }
 }

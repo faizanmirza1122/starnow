@@ -14,22 +14,19 @@ class ExperienceLevelSeeder extends Seeder
      */
     public function run()
     {
-        
+
         ExpreienceLevel::truncate();
-  
+
         $levels = [
-            ['experience_level' => 'below 1'],
-            ['experience_level' => '1year +'],
-            ['experience_level' => '2 year +'],
-            ['experience_level' => '3 year +'],
-            ['experience_level' => '4 year +'],
-            ['experience_level' => '5 year +'],
-            ['experience_level' => 'Above'],
+            ['experience' => 'Entry-level'],
+            ['experience' => 'Intermediate'],
+            ['experience' => 'Mid-level'],
+            ['experience' => 'expert'],
+            ['experience' => 'Professional'],
         ];
-          
+
         foreach ($levels as $key => $value) {
             ExpreienceLevel::create($value);
         }
     }
-    
 }

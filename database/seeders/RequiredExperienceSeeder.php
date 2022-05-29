@@ -15,15 +15,16 @@ class RequiredExperienceSeeder extends Seeder
     public function run()
     {
         RequiredExpreience::truncate();
-  
+
         $Experiencerequired = [
-            ['experience' => 'Entry-level'],
-            ['experience' => 'Intermediate'],
-            ['experience' => 'Mid-level'],
-            ['experience' => 'expert'],
-            ['experience' => 'Professional'],
+            ['experience_level' => 'below 1'],
+            ['experience_level' => '1 year +'],
+            ['experience_level' => '2 year +'],
+            ['experience_level' => '3 year +'],
+            ['experience_level' => '4 year +'],
+            ['experience_level' => '5 year +'],
         ];
-          
+
         foreach ($Experiencerequired as $key => $value) {
             RequiredExpreience::create($value);
         }

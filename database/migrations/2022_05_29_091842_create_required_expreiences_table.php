@@ -15,7 +15,7 @@ class CreateRequiredExpreiencesTable extends Migration
     {
         Schema::create('required_expreiences', function (Blueprint $table) {
             $table->id();
-            $table->string('experience');
+            $table->string('experience_level');
             $table->timestamps();
         });
     }

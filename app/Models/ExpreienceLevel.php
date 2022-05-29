@@ -11,8 +11,8 @@ class ExpreienceLevel extends Model
 
     protected $guarded = [];
 
-    public function job()
+    public function jobs()
     {
-        return $this->belongsTo(Job::class);
+        return $this->hasMany(Job::class);
     }
 }
