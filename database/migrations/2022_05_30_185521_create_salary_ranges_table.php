@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequiredExpreiencesTable extends Migration
+class CreateSalaryRangesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateRequiredExpreiencesTable extends Migration
      */
     public function up()
     {
-        Schema::create('required_expreiences', function (Blueprint $table) {
+        Schema::create('salary_ranges', function (Blueprint $table) {
             $table->id();
-            $table->string('experience');
+            $table->string('salary');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateRequiredExpreiencesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('required_expreiences');
+        Schema::dropIfExists('salary_ranges');
     }
 }

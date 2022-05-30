@@ -4,9 +4,11 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\ClientRoleController;
 use App\Http\Controllers\Admin\WorkerRoleController;
+use App\Http\Controllers\Admin\JobCategoryController;
 
 use App\Http\Controllers\Client\DashboardController as ClientDashboardController;
 use App\Http\Controllers\Client\AuthController as ClientAuthController;
+use App\Http\Controllers\Client\JobController;
 
 use App\Http\Controllers\Worker\AuthController as WorkerAuthController;
 
@@ -86,6 +88,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'check.admin']], fun
       // client roles resource
       Route::resource('client-roles', ClientRoleController::class);
 
+      // job categories resource
+      Route::resource('job-categories', JobCategoryController::class);
 
       // profile get and post operations
       Route::get('/profile', [AdminAuthController::class, 'profile'])->name('admin.profile');
@@ -105,7 +109,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'check.admin']], fun
  */
 Route::group(['prefix' => 'client', 'middleware' => ['auth', 'check.client']], function () {
       Route::get('/dashboard', [ClientDashboardController::class, 'dashboard'])->name('client.dashboard');
+      
 
+      // jobs resource
+      Route::resource('client-jobs', JobController::class);
 
       Route::get('/profile', [ClientAuthController::class, 'profile'])->name('client.profile');
       Route::put('/update-profile', [ClientAuthController::class, 'updateProfile'])->name('client.update.profile');

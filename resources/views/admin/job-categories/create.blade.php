@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Admin | Create Worker Role')
+@section('title', 'Admin | Create Job Category')
 
 @section('content')
     <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
@@ -21,14 +21,14 @@
                                 <div class="kt-portlet__head">
                                     <div class="kt-portlet__head-label">
                                         <h3 class="kt-portlet__head-title">
-                                            Create Role
+                                            Create Job Category
                                         </h3>
                                     </div>
                                 </div>
 
                                 <!--begin::Form-->
                                 <form class="kt-form kt-form--label-right" method="post"
-                                    action="{{ route('worker-roles.store') }}">
+                                    action="{{ route('job-categories.store') }}">
                                     @csrf
                                     <div class="m-3">
                                         @include('common.partials.error-summary')

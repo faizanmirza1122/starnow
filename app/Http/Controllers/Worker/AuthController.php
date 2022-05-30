@@ -28,7 +28,7 @@ class AuthController extends Controller
      */
     public function postFindWork(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'email' => 'required|email|unique:users',
             'username' => 'required|string|max:255|unique:users',
             'password' => 'required',
@@ -55,8 +55,14 @@ class AuthController extends Controller
         ]);
 
         $worker = $user->worker()->create([
-            'roles' => $request->worker_roles,
+            'user_id' => $user->id,
         ]);
+
+        $worker_roles = $data['worker_roles'];
+       
+        foreach ($worker_roles as $worker_role) {
+            $worker->workerRoles()->attach($worker_role);
+        }
 
         if ($user && $worker) {
             request()->session()->flash('alert-class', 'alert-success');

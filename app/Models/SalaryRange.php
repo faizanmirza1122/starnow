@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Worker extends Model
+class SalaryRange extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function workerRoles()
+    public function jobs()
     {
-        return $this->belongsToMany(WorkerRole::class);
+        return $this->hasMany(Job::class);
     }
 }

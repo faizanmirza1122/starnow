@@ -17,12 +17,12 @@ class RequiredExperienceSeeder extends Seeder
         RequiredExpreience::truncate();
 
         $Experiencerequired = [
-            ['experience_level' => 'below 1'],
-            ['experience_level' => '1 year +'],
-            ['experience_level' => '2 year +'],
-            ['experience_level' => '3 year +'],
-            ['experience_level' => '4 year +'],
-            ['experience_level' => '5 year +'],
+            ['experience' => 'below 1'],
+            ['experience' => '1 year +'],
+            ['experience' => '2 year +'],
+            ['experience' => '3 year +'],
+            ['experience' => '4 year +'],
+            ['experience' => '5 year +'],
         ];
 
         foreach ($Experiencerequired as $key => $value) {

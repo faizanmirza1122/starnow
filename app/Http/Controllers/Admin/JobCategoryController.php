@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\ClientRole;
 use Illuminate\Http\Request;
 use App\Utils\AppConst;
+use App\Models\JobCategory;
 
-class ClientRoleController extends Controller
+class JobCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class ClientRoleController extends Controller
      */
     public function index()
     {
-        $clientRoles = ClientRole::paginate(AppConst::PAGE_SIZE);
-        return view('admin.client-roles.index', compact('clientRoles'));
+        $jobCategories = JobCategory::paginate(AppConst::PAGE_SIZE);
+        return view('admin.job-categories.index', compact('jobCategories'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ClientRoleController extends Controller
      */
     public function create()
     {
-        return view('admin.client-roles.create');
+        return view('admin.job-categories.create');
     }
 
     /**
@@ -39,13 +39,13 @@ class ClientRoleController extends Controller
     public function store(Request $request)
     {
         $data = $this->validate($request, [
-            'name' => 'required|unique:client_roles',
+            'name' => 'required|unique:job_categories',
         ]);
 
-        ClientRole::create($data);
+        JobCategory::create($data);
         request()->session()->flash('alert-class', 'alert-success');
-        request()->session()->flash('message', 'Client Role Created Successfully');
-        return redirect()->route('client-roles.index');
+        request()->session()->flash('message', 'Job Category Created Successfully');
+        return redirect()->route('job-categories.index');
     }
 
     /**
@@ -65,9 +65,10 @@ class ClientRoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(ClientRole $clientRole)
+    public function edit($id)
     {
-        return view('admin.client-roles.edit', compact('clientRole'));
+        $jobCategory = JobCategory::findOrFail($id);
+        return view('admin.job-categories.edit', compact('jobCategory'));
     }
 
     /**
@@ -77,16 +78,16 @@ class ClientRoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ClientRole $clientRole)
+    public function update(Request $request, $id)
     {
         $data = $this->validate($request, [
-            'name' => 'required|unique:client_roles,name,' . $clientRole->id,
+            'name' => 'required|unique:job_categories,name,'.$id,
         ]);
 
-        $clientRole->update($data);
+        JobCategory::findOrFail($id)->update($data);
         request()->session()->flash('alert-class', 'alert-success');
-        request()->session()->flash('message', 'Client Role Updated Successfully');
-        return redirect()->route('client-roles.index');
+        request()->session()->flash('message', 'Job Category Updated Successfully');
+        return redirect()->route('job-categories.index');
     }
 
     /**
@@ -95,11 +96,11 @@ class ClientRoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ClientRole $clientRole)
+    public function destroy($id)
     {
-        $clientRole->delete();
+        JobCategory::findOrFail($id)->delete();
         request()->session()->flash('alert-class', 'alert-success');
-        request()->session()->flash('message', 'Client Role Deleted Successfully');
-        return redirect()->route('client-roles.index');
+        request()->session()->flash('message', 'Job Category Deleted Successfully');
+        return redirect()->route('job-categories.index');
     }
 }

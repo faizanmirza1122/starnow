@@ -30,4 +30,19 @@ class Job extends Model
     {
         return $this->belongsTo(Country::class);
     }
+
+    public function category(){
+        return $this->belongsTo(JobCategory::class);
+    }
+
+    // save title as slug
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['slug'] = str_slug($value);
+    }
+
+    public function salaryRange()
+    {
+        return $this->belongsTo(SalaryRange::class);
+    }
 }

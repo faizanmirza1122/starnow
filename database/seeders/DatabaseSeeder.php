@@ -22,11 +22,12 @@ class DatabaseSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
 
+        $this->call(SalaryRangeSeeder::class);
         $this->call(ExperienceLevelSeeder::class);
         $this->call(RequiredExperienceSeeder::class);
         $this->call(CountrySeeder::class);
-        
-    Schema::enableForeignKeyConstraints();
+
+        Schema::enableForeignKeyConstraints();
 
         // Admin 
         User::create([
@@ -82,10 +83,6 @@ class DatabaseSeeder extends Seeder
 
         Worker::create([
             'user_id' => $worker->id,
-            'roles' => [],
         ]);
-
-
-       
     }
 }
