@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Admin | Create Worker Role')
+@section('title', 'Admin | Update Job Category')
 
 @section('content')
     <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
@@ -21,17 +21,18 @@
                                 <div class="kt-portlet__head">
                                     <div class="kt-portlet__head-label">
                                         <h3 class="kt-portlet__head-title">
-                                            Create Role
+                                            Update Job Category
                                         </h3>
                                     </div>
                                 </div>
 
                                 <!--begin::Form-->
                                 <form class="kt-form kt-form--label-right" method="post"
-                                    action="{{ route('worker-roles.store') }}">
+                                    action="{{ route('job-categories.update', $jobCategory->id) }}">
                                     @csrf
+                                    @method('PUT')
                                     <div class="m-3">
-                                        @include('common.partials.error-summary')
+                                          @include('common.partials.error-summary')
                                     </div>
 
                                     <div class="kt-portlet__body col-lg-6 col-xl-6">
@@ -41,13 +42,13 @@
                                                             class="bi bi-person-lines-fill"></i></span>
                                                 </div>
                                                 <input type="text" class="form-control" placeholder="Name"
-                                                    aria-describedby="basic-addon1" name="name">
+                                                    aria-describedby="basic-addon1" name="name" value="{{ $jobCategory->name }}">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="kt-portlet__foot">
                                         <div class="kt-form__actions">
-                                            <button class="btn btn-primary" type="submit">Create</button>
+                                            <button class="btn btn-primary" type="submit">Update</button>
                                         </div>
                                     </div>
                                 </form>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\WorkerRole;
 use Illuminate\Http\Request;
+use App\Utils\AppConst;
 
 class WorkerRoleController extends Controller
 {
@@ -15,7 +16,7 @@ class WorkerRoleController extends Controller
      */
     public function index()
     {
-        $workerRoles = WorkerRole::paginate(10);
+        $workerRoles = WorkerRole::paginate(AppConst::PAGE_SIZE);
         return view('admin.worker-roles.index', compact('workerRoles'));
     }
 

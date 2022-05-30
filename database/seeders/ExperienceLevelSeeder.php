@@ -18,11 +18,11 @@ class ExperienceLevelSeeder extends Seeder
         ExpreienceLevel::truncate();
 
         $levels = [
-            ['experience' => 'Entry-level'],
-            ['experience' => 'Intermediate'],
-            ['experience' => 'Mid-level'],
-            ['experience' => 'expert'],
-            ['experience' => 'Professional'],
+            ['experience_level' => 'Entry-level'],
+            ['experience_level' => 'Intermediate'],
+            ['experience_level' => 'Mid-level'],
+            ['experience_level' => 'Professional'],
+            ['experience_level' => 'Expert'],
         ];
 
         foreach ($levels as $key => $value) {
