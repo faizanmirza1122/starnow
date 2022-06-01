@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Admin | All Jobs')
+@section('title', 'Admin | All Tags')
 
 @section('content')
     <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
         <div class="kt-container  kt-container--fluid  kt-grid kt-grid--ver">
-            @include('client.partials.side-bar')
+            @include('admin.partials.side-bar')
             <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
                 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
@@ -19,12 +19,12 @@
                                         class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
                                         <div class="kt-portlet__head-label">
                                             <h3 class="kt-portlet__head-title">
-                                                All Jobs
+                                                All Tags
                                             </h3>
                                         </div>
                                         <div class="kt-portlet__head-toolbar">
                                             <div class="dropdown dropdown-inline">
-                                                <a href="{{ route('client-jobs.create') }}"
+                                                <a href="{{ route('tags.create') }}"
                                                     class="btn btn-primary">Create
                                                     new</a>
                                             </div>
@@ -34,38 +34,16 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Title</th>
-                                                    <th>Salary Range</th>
-                                                    <th>Experience Level</th>
-                                                    <th>Job Category</th>
-                                                    <th>Expiry Date</th>
-                                                    <th>Posted Date</th>
-                                                    <th>Status</th>
+                                                    <th>Name</th>
+                                                    <th>Created At</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($jobs as $job)
+                                                @foreach ($tags as $tag)
                                                     <tr>
-                                                        <td>{{ $job->title }}</td>
-                                                        <td>Rs. {{ $job->salaryRange->salary }}</td>
-                                                        <td>{{ $job->experienceLevel->experience_level }}</td>
-                                                        <td>{{ $job->category->name }}</td>
-                                                        <td>
-                                                            @if ($job->status === 1)
-                                                                {{ $job->expiry_date->format('d-m-Y') }}
-                                                            @else
-                                                                <span> ----------- </span>
-                                                            @endif
-                                                        </td>
-                                                        <td>{{ $job->created_at->format('d F Y') }}</td>
-                                                        <td>
-                                                            @if($job->status == 1)
-                                                                <span class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill">Active</span>
-                                                            @else
-                                                                <span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill">Inactive</span>
-                                                            @endif
-                                                        </td>
+                                                        <td>{{ $tag->name }}</td>
+                                                        <td>{{ $tag->created_at->format('d F Y') }}</td>
                                                         <td>
                                                             <div class="dropdown">
                                                                 <div class="dropdown-toggle" data-toggle="dropdown">
@@ -73,22 +51,17 @@
                                                                 </div>
                                                                 <div class="dropdown-menu ">
                                                                     <a class="dropdown-item"
-                                                                        href="">
-                                                                        <i class="bi bi-currency-dollar"></i>
-                                                                        Pay Now
-                                                                    </a>
-                                                                    <a class="dropdown-item"
-                                                                        href="{{ route('client-jobs.edit', [$job->id]) }}">
+                                                                        href="{{ route('tags.edit', [$tag->id]) }}">
                                                                         <i class="bi bi-pencil-square"></i>
                                                                         Edit
                                                                     </a>
                                                                     <a class="dropdown-item" href="#"
-                                                                        onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-job-{{ $job->id }}-form').submit();}">
+                                                                        onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-tag-{{ $tag->id }}-form').submit();}">
                                                                         <i class="bi bi-trash3-fill"></i> Delete
                                                                     </a>
                                                                     <form
-                                                                        action="{{ route('client-jobs.destroy', $job->id) }}"
-                                                                        id="delete-job-{{ $job->id }}-form"
+                                                                        action="{{ route('tags.destroy', $tag->id) }}"
+                                                                        id="delete-tag-{{ $tag->id }}-form"
                                                                         method="POST" style="display: none;">
                                                                         @csrf
                                                                         @method('DELETE')
@@ -101,12 +74,12 @@
                                         </table>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                {{ $jobs->links() }}
+                                                {{ $tags->links() }}
                                             </div>
                                             <div style="font-size:20px;">
-                                                Showing {{ ($jobs->currentpage() - 1) * $jobs->perpage() + 1 }} to
-                                                {{ ($jobs->currentpage() - 1) * $jobs->perpage() + $jobs->count() }}
-                                                of {{ $jobs->total() }} entries
+                                                Showing {{ ($tags->currentpage() - 1) * $tags->perpage() + 1 }} to
+                                                {{ ($tags->currentpage() - 1) * $tags->perpage() + $tags->count() }}
+                                                of {{ $tags->total() }} entries
                                             </div>
                                         </div>
                                     </div>

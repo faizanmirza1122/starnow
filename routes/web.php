@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\ClientRoleController;
 use App\Http\Controllers\Admin\WorkerRoleController;
 use App\Http\Controllers\Admin\JobCategoryController;
-
+use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Client\DashboardController as ClientDashboardController;
 use App\Http\Controllers\Client\AuthController as ClientAuthController;
 use App\Http\Controllers\Client\JobController;
@@ -90,6 +90,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'check.admin']], fun
 
       // job categories resource
       Route::resource('job-categories', JobCategoryController::class);
+
+      // tags resource
+      Route::resource('tags', TagController::class);
 
       // profile get and post operations
       Route::get('/profile', [AdminAuthController::class, 'profile'])->name('admin.profile');
