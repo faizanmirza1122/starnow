@@ -4,12 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Str;
 class Job extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'expire_in' => 'date',
+    ];
 
     public function requiredExperience()
     {
@@ -32,17 +36,20 @@ class Job extends Model
     }
 
     public function category(){
-        return $this->belongsTo(JobCategory::class);
-    }
-
-    // save title as slug
-    public function setTitleAttribute($value)
-    {
-        $this->attributes['slug'] = str_slug($value);
+        return $this->belongsTo(JobCategory::class, 'job_category_id');
     }
 
     public function salaryRange()
     {
         return $this->belongsTo(SalaryRange::class);
+    }
+
+    public function workerRoles()
+    {
+        return $this->belongsToMany(WorkerRole::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 }

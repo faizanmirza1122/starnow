@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkerRoleTable extends Migration
+class CreateExpreienceDurationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,20 @@ class CreateWorkerRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('worker_worker_role', function (Blueprint $table) {
+        Schema::create('expreience_durations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('worker_id');
-            $table->unsignedBigInteger('worker_role_id');
+            $table->string('duration');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *j
+     *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('worker_worker_role');
+        Schema::dropIfExists('expreience_durations');
     }
 }

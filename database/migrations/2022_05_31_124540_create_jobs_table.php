@@ -15,24 +15,22 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            
-            $table->string('title');
-            $table->string('slug')->nullable();
+            $table->string('title')->unique();
+            $table->string('slug');
             $table->text('description');
-            $table->date('expire_in');
-            $table->string('salary_range');
-            $table->string('worker_roles');
+            $table->date('expire_in')->nullable();
             $table->string('status');
+            
             $table->foreignId('user_id')->constrained();
-            $table->unsignedBigInteger('job_category_id');
-            $table->foreign('job_category_id')->references('id')->on('job_categories')->onDelete('cascade');
-            $table->unsignedBigInteger('required_experience_id');
-            $table->foreign('required_experience_id')->references('id')->on('required_expreiences')->onDelete('cascade');
+            $table->foreignId('job_category_id')->constrained();
+            $table->unsignedBigInteger('salary_range_id');
+            $table->foreign('salary_range_id')->references('id')->on('salary_ranges');
+            $table->unsignedBigInteger('experience_duration_id');
+            $table->foreign('experience_duration_id')->references('id')->on('expreience_durations');
             $table->unsignedBigInteger('experience_level_id');
-            $table->foreign('experience_level_id')->references('id')->on('expreience_levels')->onDelete('cascade');
+            $table->foreign('experience_level_id')->references('id')->on('expreience_levels');
             $table->unsignedBigInteger('country_id');
-            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
-           
+            $table->foreign('country_id')->references('id')->on('countries');
             $table->timestamps();
         });
     }

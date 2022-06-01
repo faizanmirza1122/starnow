@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield("title")</title>
     @include('layouts.global-panel-styles')
+    @stack('styles')
 </head>
 
 <body>
@@ -19,6 +20,7 @@
 
     @include('layouts.global-panel-scripts')
 
+    @stack('scripts')
 </body>
 
 </html>

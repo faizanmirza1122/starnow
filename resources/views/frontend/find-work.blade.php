@@ -262,9 +262,9 @@
                     @include('common.partials.error-summary')
                     <fieldset class="fieldset-old ">
                         <label>Email Address <span class="req">*</span> </label><input class="input-half"
-                            id="email" maxlength="50" name="email" type="text" value="" />
+                            id="email" maxlength="50" name="email" type="text" value="{{ old('email') }}" />
                         <label>Password <span class="req">*</span></label><input class="input-half"
-                            id="password" maxlength="50" name="password" type="password" value="" />
+                            id="password" maxlength="50" name="password" type="password" value="{{ old('password') }}" />
                     </fieldset>
                     <div id="ctl00_cphMain_registrationForm_regPanel">
 
@@ -328,23 +328,23 @@
                                     <fieldset class="fieldset-old input-half first last fieldset--name">
                                         <label>First name <span class="req">*</span>
                                         </label><input class="js-firstname" id="first_name" maxlength="20"
-                                            name="first_name" type="text" value="" />
+                                            name="first_name" type="text" value="{{ old('first_name') }}" />
                                     </fieldset>
                                     <fieldset class="fieldset-old input-half last fieldset--name">
                                         <label>Last name <span class="req">*</span>
                                         </label><input class="js-lastname" id="last_name" maxlength="20"
-                                            name="last_name" type="text" value="" />
+                                            name="last_name" type="text" value="{{ old('last_name') }}" />
                                     </fieldset>
                                 </div>
                                 <label>Username <span class="req">*</span></label><input
                                     class="input-half" id="username" maxlength="255" name="username" type="text"
-                                    value="" />
+                                    value="{{ old('username') }}" />
                             </fieldset>
                  
 
                             <fieldset class="fieldset-old ">
                                 <label>Phone # (optional)</label><input class="input-half" id="phone"
-                                    maxlength="255" name="phone" type="text" value="" />
+                                    maxlength="255" name="phone" type="text" value="{{ old('phone') }}" />
                             </fieldset>
 
                             <fieldset class="fieldset-old ">
@@ -352,22 +352,22 @@
                                 </label><select class="input-half mb2" id="country" name="country">
                                     <option value="">Choose country...</option>
                                     @foreach ($countries as $country)
-                                    <option value="{{ $country->id }}">{{ $country->name }}</option>
+                                    <option {{ old('country')==$country->id ? 'selected' : '' }} value="{{ $country->id }}">{{ $country->name }}</option>
                                     @endforeach
                                 </select>
                             </fieldset>
 
                             <fieldset class="fieldset-old"><label>Gender <span class="req">*</span></label>
                                 <div class="input-group inline">
-                                    <label><input id="male" type="radio" name="gender" value="male" /> Male</label>
-                                    <label><input id="female" type="radio" name="gender" value="female" />
+                                    <label><input id="male" type="radio" name="gender" value="male" {{ old('gender')=='male' ? 'checked' : '' }}/> Male</label>
+                                    <label><input id="female" type="radio" name="gender" value="female" {{ old('gender')=='female' ? 'checked' : '' }}/>
                                         Female</label>
                                 </div>
                             </fieldset>
                             <fieldset class="fieldset-old ">
                                 <label class="mt2">Date of Birth <span
                                         class="req">*</span></label><input class="input-half" id="dob"
-                                    maxlength="255" name="dob" type="date" value="" />
+                                    maxlength="255" name="dob" type="date" value="{{ old('dob') }}" />
                             </fieldset>
                         </div>
                         <div class="form-section last">

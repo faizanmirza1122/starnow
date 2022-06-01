@@ -24,8 +24,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call(SalaryRangeSeeder::class);
         $this->call(ExperienceLevelSeeder::class);
-        $this->call(RequiredExperienceSeeder::class);
+        $this->call(ExpreienceDurationSeeder::class);
         $this->call(CountrySeeder::class);
+        $this->call(ClientRoleSeeder::class);
+        $this->call(WorkerRoleSeeder::class);
+        $this->call(TagSeeder::class);
+        $this->call(JobCategorySeeder::class);
 
         Schema::enableForeignKeyConstraints();
 
