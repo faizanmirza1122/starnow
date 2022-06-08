@@ -369,6 +369,15 @@
                                         class="req">*</span></label><input class="input-half" id="dob"
                                     maxlength="255" name="dob" type="date" value="{{ old('dob') }}" />
                             </fieldset>
+                            <fieldset class="fieldset-old ">
+                                <label>Height <span class="req">*</span>
+                                </label><select class="input-half mb2" id="height" name="height">
+                                    <option value="">Choose height...</option>
+                                    @foreach ($heights as $height)
+                                    <option {{ old('height') == $height->id ? 'selected' : '' }} value="{{ $height->id }}">{{ $height->height }}</option>
+                                    @endforeach
+                                </select>
+                            </fieldset>
                         </div>
                         <div class="form-section last">
 

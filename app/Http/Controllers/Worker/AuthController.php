@@ -4,13 +4,16 @@ namespace App\Http\Controllers\Worker;
 
 use App\Http\Controllers\Controller;
 use App\Models\Country;
+use App\Models\Height;
 use App\Models\User;
 use App\Models\WorkerRole;
 use App\Utils\UserType;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
-
+use Illuminate\Support\Facades\Storage;
+use Str;
 class AuthController extends Controller
 {
     /**
@@ -20,7 +23,8 @@ class AuthController extends Controller
     {
         $workerRoles = WorkerRole::all();
         $countries = Country::all();
-        return view('frontend.find-work', compact('workerRoles','countries'));
+        $heights = Height::all();
+        return view('frontend.find-work', compact('workerRoles', 'countries', 'heights'));
     }
 
     /**
@@ -39,6 +43,7 @@ class AuthController extends Controller
             'dob' => 'required|date',
             'country' => 'required',
             'worker_roles' => 'required',
+            'height' => 'required'
         ]);
 
         $user = User::create([
@@ -56,6 +61,8 @@ class AuthController extends Controller
 
         $worker = $user->worker()->create([
             'user_id' => $user->id,
+            'height_id' => $request->height,
+            'age' =>  Carbon::parse($request->dob)->age,
         ]);
 
         $worker_roles = $data['worker_roles'];
@@ -90,9 +97,9 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->where('type', UserType::WORKER)->first();
 
-        if ($user && Hash::check($request->password, $user->password)) {
+        if ($user && Hash::check($request->password, $user->password )) {
             auth()->login($user);
             return redirect()->route('home');
         }
@@ -109,7 +116,8 @@ class AuthController extends Controller
     {
         $user = auth()->user();
         $countries = Country::all();
-        return view('worker.auth.profile', compact('user', 'countries'));
+        $heights = Height::all();
+        return view('worker.auth.profile', compact('user', 'countries', 'heights'));
     }
 
     /**
@@ -127,6 +135,31 @@ class AuthController extends Controller
             'country' => 'required',
             'phone' => 'required|unique:users,phone,' . auth()->user()->id,
         ]);
+
+        $request->validate([
+            'height' => 'required',
+        ]);
+        auth()->user()->worker()->update([
+            'height_id' => $request->height,
+        ]);
+
+        // update user profile photo
+        if ($request->hasFile('profile_photo')) {
+            $photo = $request->file('profile_photo');
+            $filename = time() . '.' . $photo->getClientOriginalExtension();
+
+            // delete previous profile photo
+            if (auth()->user()->profile_photo) {
+                Storage::delete('/public/profiles'.'/' . auth()->user()->profile_photo);
+            }
+            Storage::putFileAs('/public/profiles'.'/',$photo,$filename);
+
+            $user = auth()->user();
+            $user->profile_photo = $filename;
+            $user->save();
+        }
+
+
         auth()->user()->update($data);
         request()->session()->flash('alert-class', 'alert-success');
         request()->session()->flash('message', 'Profile updated successfully.');

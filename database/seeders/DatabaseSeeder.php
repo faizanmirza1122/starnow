@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
 
+        $this->call(HeightSeeder::class);
         $this->call(SalaryRangeSeeder::class);
         $this->call(ExperienceLevelSeeder::class);
         $this->call(ExpreienceDurationSeeder::class);
@@ -87,6 +88,7 @@ class DatabaseSeeder extends Seeder
 
         Worker::create([
             'user_id' => $worker->id,
+            'age' => '18'
         ]);
     }
 }

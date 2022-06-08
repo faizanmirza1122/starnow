@@ -61,9 +61,6 @@
 
 
 
-
-
-
     <title>Actors, Extras, Models, Musicians Talent Directory - StarNow</title>
     <meta name="description" content="Actors, extras, models, singers, and musicians available for acting jobs, auditions, modelling work, music jobs, TV and film extras casting calls.">
     <meta property="fb:app_id" content="192931954085724">
@@ -331,21 +328,28 @@
             <div class="row">
                 <div class="small-12 columns">
                     <div class="flex flex-row justify-between relative">
-                        <p class="ml2-ns mt1 mt2-ns txt-black-60 f7"><strong>61,614</strong> <!-- -->results</p><select class="select-clean no-border f8-ns" style="max-width:220px">
+                        <p class="ml2-ns mt1 mt2-ns txt-black-60 f7"><strong>{{ $users->total() }}</strong> <!-- -->results</p><select class="select-clean no-border f8-ns" style="max-width:220px">
                             <option selected="" value="m">Best match first</option>
                             <option value="n">Newest members first</option>
                         </select>
                     </div>
                     <div class="headshot-card-list">
+                        @foreach ($users as $user)
                         <div class="headshot-card-wrapper">
                             <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/ameliaconway1/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/05/2270505_13654988.jpg" alt="Amelia" /></div>
+                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/talent/{{ $user->username }}" tabindex="0"></a>
+                                    <div class="headshot-card__mask">
+                                        @if($user->profile_photo)
+                                        <img class="headshot-card__image" src="{{ asset('storage/profiles/' . $user->profile_photo) }}" alt="Amelia" />
+                                        @else
+                                        <img class="headshot-card__image" src="https://via.placeholder.com/300" alt="Amelia" />
+                                        @endif
+                                    </div>
                                     <div class="headshot-card__details">
                                         <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/ameliaconway1/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
+                                            {{-- <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/ameliaconway1/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div> --}}
                                         </div>
-                                        <h2 class="headshot-card__name">Amelia</h2><span class="headshot-card__location">New South Wales, Australia</span>
+                                        <h2 class="headshot-card__name">{{ $user->fullname }}</h2><span class="headshot-card__location">{{ $user->oneCountry->name }}</span>
                                     </div>
                                 </div>
                                 <div class="headshot-card__actions">
@@ -358,405 +362,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/evavonmitzka/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/92/1269892_11483425.jpg" alt="Eva" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/evavonmitzka/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Eva</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/rkfoad/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/18/1247118_10622812.jpg" alt="Ross K" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/rkfoad/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Ross K</h2><span class="headshot-card__location">Kingston upon Thames, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/marialidze/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/87/4312387_13661053.jpg" alt="Maria" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/marialidze/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Maria</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/hayleyhughesmodelactress/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/05/1763505_13473899.jpg" alt="Hayley Gia" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/hayleyhughesmodelactress/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Hayley Gia</h2><span class="headshot-card__location">New South Wales, Australia</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/davidegalea/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/17/2005417_13449752.jpg" alt="David" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/davidegalea/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">David</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/izzystickland/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/81/4264381_13527203.jpg" alt="Izzy" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/izzystickland/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Izzy</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/eveyasmine/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/25/1150925_13617164.jpg" alt="Eve-Yasmine" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/eveyasmine/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Eve-Yasmine</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/gemmalsharman/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/83/3406683_13618857.jpg" alt="Gemma-Louise" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/gemmalsharman/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Gemma-Louise</h2><span class="headshot-card__location">Coventry, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/amberdoigthorne/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/57/500357_12359725.jpg" alt="Amber" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/amberdoigthorne/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Amber</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/gailtaplin/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/57/4375957_13373628.jpg" alt="Gail" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/gailtaplin/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Gail</h2><span class="headshot-card__location">Bournemouth, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/ersh/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/17/1905617_13466749.jpg" alt="ERSSH" /></div>
-                                    <div class="headshot-card__details">
-                                        <h2 class="headshot-card__name">ERSSH</h2><span class="headshot-card__location">Victoria, Australia</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/tarasumner1/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/68/3187068_13537746.jpg" alt="Tara" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/tarasumner1/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Tara</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/robingreenfield/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/88/4322488_10865123.jpg" alt="Robin" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/robingreenfield/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Robin</h2><span class="headshot-card__location">Bournemouth, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/dagmar/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/69/2704369_13092832.jpg" alt="Dagmar" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/dagmar/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Dagmar</h2><span class="headshot-card__location">Dublin Region, Ireland</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/kimanhlepham/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/86/3010386_13240652.jpg" alt="Kim-Anh" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/kimanhlepham/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Kim-Anh</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/elle1982/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/80/4912980_12803009.jpg" alt="Elle" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/elle1982/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Elle</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/dennisgerald/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/93/1040093_13080939.jpg" alt="Dennis" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/dennisgerald/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Dennis</h2><span class="headshot-card__location">Manchester, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/peteryamoahkyei/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/93/1277393_12604970.jpg" alt="Peter Y" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/peteryamoahkyei/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Peter Y</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="headshot-card-wrapper">
-                            <div class="headshot-card">
-                                <div class="headshot-card__link-block"><a class="headshot-card__link-overlay" href="/mattbarkley/" tabindex="0"></a>
-                                    <div class="headshot-card__mask"><img class="headshot-card__image" src="https://snusercontent.global.ssl.fastly.net/member-headshot-square/66/4031866_12143546.jpg" alt="Matt" /></div>
-                                    <div class="headshot-card__details">
-                                        <div class="headshot-card__pill-container">
-                                            <div class="headshot-card__elevated-link-section"><a class="i2c-td-pill" href="/mattbarkley/?i2c=1"><img src="https://staticsn.com/images/icons/svg/play.svg" width="25" height="25" /></a></div>
-                                        </div>
-                                        <h2 class="headshot-card__name">Matt</h2><span class="headshot-card__location">London, UK</span>
-                                    </div>
-                                </div>
-                                <div class="headshot-card__actions">
-                                    <div class="headshot-card__action auto_save" tabindex="0" role="button"><img width="20" height="20" style="margin:4px 0" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/star.svg" alt="Save" />
-                                        <div>Save</div>
-                                    </div>
-                                    <div class="headshot-card__action auto_message" tabindex="0" role="button"><img width="28" height="28" class="v-mid o-20" src="https://staticsn.com/images/icons/svg/4.svg" alt="Message" />
-                                        <div>Message</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-                    <div class="mb5">
-                        <ul class="paging">
+                    <div class="mt-5">
+                       <div>
+                        {{ $users->links() }}
+                       </div>
+                        <div style="font-size:20px;">
+                            Showing {{ ($users->currentpage() - 1) * $users->perpage() + 1 }} to
+                            {{ ($users->currentpage() - 1) * $users->perpage() + $users->count() }}
+                            of {{ $users->total() }} entries
+                        </div>
+                        {{-- <ul class="paging">
                             <li class="paging__item active"><a class="paging__link undefined" href="?p=1">1</a></li>
                             <li class="paging__item"><a class="paging__link" href="?p=2">2</a></li>
                             <li class="paging__item"><a class="paging__link" href="?p=3">3</a></li>
@@ -764,8 +381,8 @@
                             <li class="paging__item"><a class="paging__link" href="?p=5">5</a></li>
                             <li class="paging__item paging__button paging__button--next paging__button--only-item"><a class="paging__link" href="#">Next</a></li>
                             <li class="paging__item dn"><a class="paging__link" href="#">»</a></li>
-                        </ul>
-                    </div>
+                        </ul> --}}
+                    </div> 
                     <div></div>
                 </div>
             </div>
@@ -840,7 +457,7 @@
         });
     </script>
 
-    <script>
+    {{-- <script>
         console.warn("[.NET]", {}, "\nCall stack: Error\n    at MockConsole._handleCall (React.Core.Resources.shims.js:28:31)\n    at server.js:80210:13");
         ReactDOM.hydrate(React.createElement(TalentDirectory.default, {
             "starnow": {
@@ -5197,7 +4814,7 @@
                 }
             }
         }), document.getElementById("react_0HMH04R4T13UC"));
-    </script>
+    </script> --}}
 
 
 

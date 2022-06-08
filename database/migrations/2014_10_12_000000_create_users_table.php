@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('profile_photo')->nullable();
             $table->string('gender');
             $table->date('dob');
-            $table->unsignedBigInteger('country');
+            $table->foreignId('country')->constrained();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -15,7 +15,10 @@ class CreateWorkersTable extends Migration
     {
         Schema::create('workers', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('age');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('height_id')->nullable();
+            $table->foreign('height_id')->references('id')->on('heights');
             $table->timestamps();
         });
     }

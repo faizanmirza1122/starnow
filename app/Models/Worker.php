@@ -15,4 +15,12 @@ class Worker extends Model
     {
         return $this->belongsToMany(WorkerRole::class);
     }
+
+    public function height(){
+        return $this->hasOne(Height::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
