@@ -1,11 +1,11 @@
-@extends('client.layouts.app')
+@extends('admin.layouts.app')
 
-@section('title', 'Client | All Jobs')
+@section('title', 'Admin | All Client Pakcages')
 
 @section('content')
     <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
         <div class="kt-container  kt-container--fluid  kt-grid kt-grid--ver">
-            @include('client.partials.side-bar')
+            @include('admin.partials.side-bar')
             <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
                 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
@@ -19,12 +19,12 @@
                                         class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
                                         <div class="kt-portlet__head-label">
                                             <h3 class="kt-portlet__head-title">
-                                                All Jobs
+                                                All client packages
                                             </h3>
                                         </div>
                                         <div class="kt-portlet__head-toolbar">
                                             <div class="dropdown dropdown-inline">
-                                                <a href="{{ route('client-jobs.create') }}"
+                                                <a href="{{ route('client-packages.create') }}"
                                                     class="btn btn-primary">Create
                                                     new</a>
                                             </div>
@@ -34,61 +34,69 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Title</th>
-                                                    <th>Salary Range</th>
-                                                    <th>Experience Level</th>
-                                                    <th>Job Category</th>
-                                                    <th>Expiry Date</th>
-                                                    <th>Posted Date</th>
+                                                    <th>Name</th>
+                                                    <th>Price</th>
+                                                    <th>Package expire duration (days)</th>
+                                                    <th>Job expire duration (days)</th>
+                                                    <th>Allowed jobs per day</th>
                                                     <th>Status</th>
+                                                    <th>Created At</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($jobs as $job)
+                                                @foreach ($clientPackages as $clientPackage)
                                                     <tr>
-                                                        <td>{{ $job->title }}</td>
-                                                        <td>Rs. {{ $job->salaryRange->salary }}</td>
-                                                        <td>{{ $job->experienceLevel->experience_level }}</td>
-                                                        <td>{{ $job->category->name }}</td>
+                                                        <td>{{ $clientPackage->name }}</td>
+                                                        <td>Rs. {{ $clientPackage->price }}</td>
+                                                        <td>{{ $clientPackage->package_expire_duration_in_days }}</td>
+                                                        <td>{{ $clientPackage->job_expire_duration_in_days }}</td>
+                                                        <td>{{ $clientPackage->allowed_no_of_jobs_per_day }}</td>
                                                         <td>
-                                                            @if ($job->status === 1)
-                                                                {{ $job->expiry_date->format('d-m-Y') }}
+                                                            @if ($clientPackage->is_active == 1)
+                                                                <span
+                                                                    class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill">Active</span>
                                                             @else
-                                                                <span> ----------- </span>
+                                                                <span
+                                                                    class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill">Inactive</span>
                                                             @endif
                                                         </td>
-                                                        <td>{{ $job->created_at->format('d F Y') }}</td>
-                                                        <td>
-                                                            @if($job->status == 1)
-                                                                <span class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill">Active</span>
-                                                            @else
-                                                                <span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill">Inactive</span>
-                                                            @endif
-                                                        </td>
+                                                        <td>{{ $clientPackage->created_at->format('d F Y') }}</td>
                                                         <td>
                                                             <div class="dropdown">
                                                                 <div class="dropdown-toggle" data-toggle="dropdown">
                                                                     <i class="bi bi-gear-fill cursor-pointer"></i>
                                                                 </div>
                                                                 <div class="dropdown-menu ">
-                                                                    <a class="dropdown-item"
-                                                                        href="">
-                                                                        <i class="bi bi-currency-dollar"></i>
-                                                                        Pay Now
+                                                                    <a class="dropdown-item" href="#"
+                                                                        onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('update-status-clientPackage-{{ $clientPackage->id }}-form').submit();}">
+                                                                        <i class="bi bi-broadcast"></i>
+                                                                        @if ($clientPackage->is_active == 1)
+                                                                            <span
+                                                                                class="kt-nav__link-text">Deactivate</span>
+                                                                        @else
+                                                                            <span class="kt-nav__link-text">Activate</span>
+                                                                        @endif
                                                                     </a>
+                                                                    <form
+                                                                        action="{{ route('client-packages.update-status', $clientPackage->id) }}"
+                                                                        id="update-status-clientPackage-{{ $clientPackage->id }}-form"
+                                                                        method="POST" style="display: none;">
+                                                                        @csrf
+                                                                        @method('PUT')
+                                                                    </form>
                                                                     <a class="dropdown-item"
-                                                                        href="{{ route('client-jobs.edit', [$job->id]) }}">
+                                                                        href="{{ route('client-packages.edit', [$clientPackage->id]) }}">
                                                                         <i class="bi bi-pencil-square"></i>
                                                                         Edit
                                                                     </a>
                                                                     <a class="dropdown-item" href="#"
-                                                                        onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-job-{{ $job->id }}-form').submit();}">
+                                                                        onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-clientPackage-{{ $clientPackage->id }}-form').submit();}">
                                                                         <i class="bi bi-trash3-fill"></i> Delete
                                                                     </a>
                                                                     <form
-                                                                        action="{{ route('client-jobs.destroy', $job->id) }}"
-                                                                        id="delete-job-{{ $job->id }}-form"
+                                                                        action="{{ route('client-packages.destroy', $clientPackage->id) }}"
+                                                                        id="delete-clientPackage-{{ $clientPackage->id }}-form"
                                                                         method="POST" style="display: none;">
                                                                         @csrf
                                                                         @method('DELETE')
@@ -101,12 +109,14 @@
                                         </table>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                {{ $jobs->links() }}
+                                                {{ $clientPackages->links() }}
                                             </div>
                                             <div style="font-size:20px;">
-                                                Showing {{ ($jobs->currentpage() - 1) * $jobs->perpage() + 1 }} to
-                                                {{ ($jobs->currentpage() - 1) * $jobs->perpage() + $jobs->count() }}
-                                                of {{ $jobs->total() }} entries
+                                                Showing
+                                                {{ ($clientPackages->currentpage() - 1) * $clientPackages->perpage() + 1 }}
+                                                to
+                                                {{ ($clientPackages->currentpage() - 1) * $clientPackages->perpage() + $clientPackages->count() }}
+                                                of {{ $clientPackages->total() }} entries
                                             </div>
                                         </div>
                                     </div>

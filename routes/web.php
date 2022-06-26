@@ -9,7 +9,8 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Client\DashboardController as ClientDashboardController;
 use App\Http\Controllers\Client\AuthController as ClientAuthController;
 use App\Http\Controllers\Client\JobController;
-
+use App\Http\Controllers\Client\PackagePlanController;
+use App\Http\Controllers\ClientPackageController;
 use App\Http\Controllers\Worker\AuthController as WorkerAuthController;
 
 use App\Http\Controllers\Frontend\PageController;
@@ -67,7 +68,7 @@ Route::get('/casting-calls/all/pakistan/', [PageController::class, 'jobs'])->nam
 Route::get('/talent/all/', [PageController::class, 'talentDirectory'])->name('talent-directory');
 Route::get('/feed', [PageController::class, 'discover'])->name('discover');
 Route::get('/placelisting', [PageController::class, 'placeListing'])->name('placelisting');
-
+Route::get('/talent/{username}', [PageController::class, 'talentProfile'])->name('talent-profile');
 
 
 
@@ -94,6 +95,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'check.admin']], fun
       // tags resource
       Route::resource('tags', TagController::class);
 
+      // packages for client resource
+      Route::resource('client-packages', ClientPackageController::class);
+      Route::put('client-packages/{clientPackage}/update-status', [ClientPackageController::class, 'updateStatus'])->name('client-packages.update-status');
+
       // profile get and post operations
       Route::get('/profile', [AdminAuthController::class, 'profile'])->name('admin.profile');
       Route::put('/update-profile', [AdminAuthController::class, 'changePassword'])->name('admin.change.password');
@@ -117,6 +122,9 @@ Route::group(['prefix' => 'client', 'middleware' => ['auth', 'check.client']], f
       // jobs resource
       Route::resource('client-jobs', JobController::class);
 
+      // packges plans
+      Route::get('/package-plans', [PackagePlanController::class, 'index'])->name('client.package-plans.index');
+
       Route::get('/profile', [ClientAuthController::class, 'profile'])->name('client.profile');
       Route::put('/update-profile', [ClientAuthController::class, 'updateProfile'])->name('client.update.profile');
       Route::put('/change-password', [ClientAuthController::class, 'changePassword'])->name('client.change.password');
@@ -135,6 +143,9 @@ Route::group(['prefix' => 'client', 'middleware' => ['auth', 'check.client']], f
 Route::group(['prefix' => 'worker', 'middleware' => ['auth', 'check.worker']], function () {
       Route::get('/', 'HomeController@index')->name('worker.home');
 
+      // delete image
+      Route::delete('/images/{id}', [WorkerAuthController::class, 'deleteImage'])->name('worker.image.destory');
+      Route::delete('/videos/{id}', [WorkerAuthController::class, 'deleteVideo'])->name('worker.video.destory');
 
       Route::get('/profile', [WorkerAuthController::class, 'profile'])->name('worker.profile');
       Route::put('/update-profile', [WorkerAuthController::class, 'updateProfile'])->name('worker.update.profile');

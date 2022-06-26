@@ -1,6 +1,6 @@
-@extends('admin.layouts.app')
+@extends('client.layouts.app')
 
-@section('title', 'Admin | Create Job')
+@section('title', 'Client | Create Job')
 
 <!-- Latest compiled and minified CSS -->
 {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"> --}}
