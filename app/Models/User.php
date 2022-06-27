@@ -67,4 +67,20 @@ class User extends Authenticatable
     public function jobs(){
         return $this->hasMany(Job::class);
     }
+
+    public function oneCountry(){
+        return $this->belongsTo(Country::class, 'country');
+    }
+
+    public function oneHeight(){
+        return $this->hasOne(Height::class);
+    }
+
+    public function images(){
+        return $this->hasMany(Image::class);
+    }
+
+    public function videos(){
+        return $this->hasMany(Video::class);
+    }
 }

@@ -249,6 +249,7 @@
                 <form method="post" action="{{ route('worker.login.post') }}" id="aspnetForm">
                     @csrf
                     @include('common.partials.error-summary')
+                    @include('common.partials.alerts')
                     <h2 class="copy__h2">Enter your Login details</h2>
                     <fieldset class="fieldset-old ">
                         <label>Email Address <span class="req">*</span> </label><input class="input-half"

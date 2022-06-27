@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Height;
+use App\Models\User;
+use App\Utils\AppConst;
+use App\Utils\UserType;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -12,6 +16,22 @@ class PageController extends Controller
     {
         return view('frontend.signup-as');
     }
+    
+    public function talentDirectory()
+    {
+        $users = User::where('type', UserType::WORKER)->paginate(AppConst::PAGE_SIZE);
+        return view('frontend.talent', compact('users'));
+    }
+
+    public function talentProfile($username)
+    {
+        $user = User::where('username', $username)->first();
+
+        $height_id = $user->worker->height_id;
+        $height = Height::find($height_id);
+        return view('frontend.talent-profile', compact('user', 'height'));
+    }
+
 
     public function index()
     {
@@ -23,10 +43,7 @@ class PageController extends Controller
         return view('frontend.jobs');
     }
 
-    public function talentDirectory()
-    {
-        return view('frontend.talent');
-    }
+   
 
     public function discover()
     {
