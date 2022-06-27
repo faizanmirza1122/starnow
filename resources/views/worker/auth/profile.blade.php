@@ -62,7 +62,7 @@
                             @foreach ($user->images as $image)
                                 <div style="margin:5px;position: relative;">
                                     <div>
-                                        <a class="dropdown-item" href="#"
+                                        {{-- <a class="dropdown-item" href="#"
                                             onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-images-{{ $image->id }}-form').submit();}"
                                             style="background-color: rgb(200, 80, 80);color:white;padding:5px;">
                                             Delete
@@ -72,7 +72,7 @@
                                             style="display: none;">
                                             @csrf
                                             @method('DELETE')
-                                        </form>
+                                        </form> --}}
                                     </div>
                                     <img width="300" height="200" class="image"
                                         src="{{ asset('storage/images/' . $image->image) }}" alt="Amelia" />
@@ -97,14 +97,14 @@
                             @foreach ($user->videos as $video)
                                 <div style="margin:5px;position: relative;">
                                     <div>
-                                        <a onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-videos-{{ $video->id }}-form').submit();}"
+                                        {{-- <a onclick="event.preventDefault(); if(confirm('Are you sure you want to perform this action?')){document.getElementById('delete-videos-{{ $video->id }}-form').submit();}"
                                             style="background-color: rgb(200, 80, 80);color:white;padding:5px;">Delete</a>
                                         <form action="{{ route('worker.video.destory', $video->id) }}"
                                             id="delete-videos-{{ $video->id }}-form" method="POST"
                                             style="display: none;">
                                             @csrf
                                             @method('DELETE')
-                                        </form>
+                                        </form> --}}
                                     </div>
 
                                     <iframe width="300" height="200"

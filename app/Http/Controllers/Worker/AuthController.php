@@ -137,8 +137,8 @@ class AuthController extends Controller
             'dob' => 'required',
             'country' => 'required',
             'phone' => 'required|unique:users,phone,' . auth()->user()->id,
-            'images.*' => 'image|mimes:jpeg,png,jpg|max:10240', // max 10MB
-            'videos.*' => 'url|max:255', // max 255 characters
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg|max:10240', // max 10MB
+            'videos.*' => 'nullable|max:255', // max 255 characters
         ]);
 
         $request->validate([
