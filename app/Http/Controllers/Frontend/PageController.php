@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Height;
+use App\Models\Job;
 use App\Models\User;
 use App\Utils\AppConst;
 use App\Utils\UserType;
@@ -40,7 +41,8 @@ class PageController extends Controller
 
     public function jobs()
     {
-        return view('frontend.jobs');
+        $jobs = Job::latest()->get();
+        return view('frontend.jobs', compact('jobs'));
     }
 
    
